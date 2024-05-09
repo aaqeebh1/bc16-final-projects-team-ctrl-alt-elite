@@ -1,0 +1,16 @@
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--header-background);
+  color: white;
+  font-family: var(--header-font);
+  height: 56px;
+  margin: 0 auto;
+  align-items: center;
+}
+.header-title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20px;
+}
