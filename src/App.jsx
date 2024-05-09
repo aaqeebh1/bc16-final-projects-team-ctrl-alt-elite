@@ -1,10 +1,11 @@
 import React from "react";
-import Wrapper from "./components/Wrapper/Wrapper";
+import { YearView } from "./components/YearView/YearView.jsx";
+import "./App.css";
 
 const App = () => {
   return (
     <div>
-      <Wrapper />
+      <YearView />
     </div>
   );
 };
