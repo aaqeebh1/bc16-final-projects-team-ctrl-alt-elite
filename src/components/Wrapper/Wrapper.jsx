@@ -1,5 +1,6 @@
 import React from "react";
 import { YearView } from "../YearView/YearView";
+import { SixMonthView } from "../YearView/YearView";
 import "./Wrapper.css";
 import Logo from "../../assets/logo.svg";
 
@@ -17,6 +18,7 @@ const Wrapper = () => {
       </header>
       {/* Navbar -> current year -> view toggle -> departmnent keys -> event type key */}
       <YearView />
+      <SixMonthView />
       {/* Magnifiying zoom toggle */}
     </>
   );
