@@ -1,6 +1,6 @@
 import React from "react";
 import { YearView } from "../YearView/YearView";
-import { SixMonthView } from "../YearView/YearView";
+import { SixMonthView } from "../SixMonthView/SixMonthView";
 import "./Wrapper.css";
 import Logo from "../../assets/logo.svg";
 
