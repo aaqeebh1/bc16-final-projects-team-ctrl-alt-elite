@@ -1,6 +1,29 @@
-.departmentKey {
-  grid-template-columns: repeat(6, 1fr);
+.departmentKey-container {
+  display: grid;
+  column-gap: 40px;
+  border: 1px solid #CCCCCC; /* Add a border to the container */
+  background-color: #f2f2f2; /* Set background color to grey */
+  padding: 20px; 
+  margin-top: 5px;
+  position: absolute; 
+  top: 5; 
+  right: 500px;
+  border-radius: 10px;
+  
+  z-index: -1; 
 }
+
+.departmentKey {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .departmentKey__item {
   display: flex;
+  padding-top: 10px;
+}
+
+.departmentKey__item--color {
+  border: 1px solid #CCCCCC; 
+  margin-right: 10px; 
 }
