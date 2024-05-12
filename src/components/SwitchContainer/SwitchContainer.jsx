@@ -34,14 +34,14 @@ const SwitchesContainer = () => {
         checked={selectedPlan === "Monthly"}
         onChange={handlePlanChange}
       />
-      <label htmlFor="switchYearly">Yearly</label>
-      <label htmlFor="switch6Monthly">6 Monthly</label>
-      <label htmlFor="switchMonthly">Monthly</label>
+      <label htmlFor="switchYearly">Year</label>
+      <label htmlFor="switch6Monthly">6 Month</label>
+      <label htmlFor="switchMonthly">Month</label>
       <div className="switch-wrapper">
         <div className="switch">
-          <div>Yearly</div>
-          <div>6 Monthly</div>
-          <div>Monthly</div>
+          <div>Year</div>
+          <div>6 Month</div>
+          <div>Month</div>
         </div>
       </div>
     </div>

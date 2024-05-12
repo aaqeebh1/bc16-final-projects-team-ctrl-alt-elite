@@ -4,6 +4,7 @@ import { SixMonthView } from "../SixMonthView/SixMonthView";
 import "./Wrapper.css";
 import Logo from "../../assets/logo.svg";
 import SwitchesContainer from "../SwitchContainer/SwitchContainer";
+import DepartmentKey from "../DepartmentKey/DepartmentKey";
 
 const Wrapper = () => {
   return (
@@ -21,10 +22,12 @@ const Wrapper = () => {
           <h1>Communications Dashboard </h1>
         </div>
       </header>
+      {/* Navbar -> current year -> view toggle -> departmnent keys -> event type key */}
       <nav className="nav-bar">
         <SwitchesContainer />
+         <DepartmentKey /> 
+        {/* <EventTypeKey /> */}
       </nav>
-      {/* Navbar -> current year -> view toggle -> departmnent keys -> event type key */}
       <YearView />
       <SixMonthView />
       {/* Magnifiying zoom toggle */}
