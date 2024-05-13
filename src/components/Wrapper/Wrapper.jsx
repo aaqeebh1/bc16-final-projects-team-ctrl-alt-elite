@@ -1,6 +1,6 @@
 import React from "react";
-import { YearView } from "../YearView/YearView";
-import { SixMonthView } from "../SixMonthView/SixMonthView";
+// import  YearView  from "../YearView/YearView";
+import  SixMonthView  from "../SixMonthView/SixMonthView";
 import "./Wrapper.css";
 import Logo from "../../assets/logo.svg";
 import SwitchesContainer from "../SwitchContainer/SwitchContainer";
@@ -25,10 +25,10 @@ const Wrapper = () => {
       {/* Navbar -> current year -> view toggle -> departmnent keys -> event type key */}
       <nav className="nav-bar">
         <SwitchesContainer />
-         <DepartmentKey /> 
+        <DepartmentKey />
         {/* <EventTypeKey /> */}
       </nav>
-      <YearView />
+      {/* <YearView /> */}
       <SixMonthView />
       {/* Magnifiying zoom toggle */}
     </>
