@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 // import { YearView } from "../YearView/YearView";
 // import { SixMonthView } from "../SixMonthView/SixMonthView";
+=======
+import React from "react";
+// import { SixMonthView } from "../SixMonthView/SixMonthView";
+// import  YearView  from "../YearView/YearView";
+>>>>>>> f723c88001639f03e971492db1cfa3c511dfcb90
 import "./Wrapper.css";
 import Logo from "../../assets/logo.svg";
 import SwitchesContainer from "../SwitchContainer/SwitchContainer";
@@ -26,6 +32,7 @@ const Wrapper = () => {
         </div>
       </header>
       {/* Navbar -> current year -> view toggle -> departmnent keys -> event type key */}
+<<<<<<< HEAD
       <div className="wrapper-container">
         <nav className="nav-bar">
           <div className="nav-wrapper">
@@ -48,6 +55,16 @@ const Wrapper = () => {
         </div>
         {/* Magnifiying zoom toggle */}
       </div>
+=======
+      <nav className="nav-bar">
+        <SwitchesContainer />
+        <DepartmentKey />
+        {/* <EventTypeKey /> */}
+      </nav>
+      {/*<SixMonthView />*/}
+      {/* <YearView /> */}
+      {/* Magnifiying zoom toggle */}
+>>>>>>> f723c88001639f03e971492db1cfa3c511dfcb90
     </>
   );
 };
