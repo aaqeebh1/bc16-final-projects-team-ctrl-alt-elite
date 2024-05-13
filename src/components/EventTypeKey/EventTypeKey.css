@@ -1,29 +1,30 @@
-.departmentKey-container {
-  display: grid;
+.event-type-key{  
+  display: grid;    
+  margin-top: 10px;
   height: 90px;
+  width: 200px;
+  column-gap: 20px;
+  row-gap: 5px;
   border: 1px solid #CCCCCC; /* Add a border to the container */
   background-color: #f2f2f2; /* Set background color to grey */
   padding: 20px; 
   margin-top: 5px;
   position: absolute; 
   top: 10%; 
-  left: 53%;
+  left: 75%;
   border-radius: 10px;  
   z-index: -1; 
-}
-
-.departmentKey {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 20px;
+}
+.event-type-key__item {
+    display: flex;
+  align-items: center;
+  margin-right: 10px;
+  
 }
 
-.departmentKey__item {
-  display: flex;
-  padding-top: 10px;
-}
-
-.departmentKey__item--color {
-  border: 1px solid #CCCCCC; 
-  margin-right: 10px; 
+.event-type-key__icon {
+  width: 20px;
+  height: 20px;
+  padding-right: 5px;
 }

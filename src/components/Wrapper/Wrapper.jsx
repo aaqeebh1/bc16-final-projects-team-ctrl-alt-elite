@@ -1,10 +1,11 @@
 import React from "react";
-import { YearView } from "../YearView/YearView";
-import { SixMonthView } from "../SixMonthView/SixMonthView";
+// import { YearView } from "../YearView/YearView";
+// import { SixMonthView } from "../SixMonthView/SixMonthView";
 import "./Wrapper.css";
 import Logo from "../../assets/logo.svg";
 import SwitchesContainer from "../SwitchContainer/SwitchContainer";
 import DepartmentKey from "../DepartmentKey/DepartmentKey";
+import EventTypeKey from "../EventTypeKey/EventTypeKey";
 
 const Wrapper = () => {
   return (
@@ -26,10 +27,10 @@ const Wrapper = () => {
       <nav className="nav-bar">
         <SwitchesContainer />
          <DepartmentKey /> 
-        {/* <EventTypeKey /> */}
+        <EventTypeKey/>
       </nav>
-      <YearView />
-      <SixMonthView />
+      {/* <YearView />
+      <SixMonthView /> */}
       {/* Magnifiying zoom toggle */}
     </>
   );

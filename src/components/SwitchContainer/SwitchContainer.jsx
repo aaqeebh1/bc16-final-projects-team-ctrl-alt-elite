@@ -20,10 +20,10 @@ const SwitchesContainer = () => {
       />
       <input
         type="radio"
-        id="switch6Monthly"
+        id="switchQuarterly"
         name="switchPlan"
-        value="6Monthly"
-        checked={selectedPlan === "6Monthly"}
+        value="Quarterly"
+        checked={selectedPlan === "Quarterly"}
         onChange={handlePlanChange}
       />
       <input
@@ -35,12 +35,12 @@ const SwitchesContainer = () => {
         onChange={handlePlanChange}
       />
       <label htmlFor="switchYearly">Year</label>
-      <label htmlFor="switch6Monthly">6 Month</label>
+      <label htmlFor="switchQuarterly">Quarter</label>
       <label htmlFor="switchMonthly">Month</label>
       <div className="switch-wrapper">
         <div className="switch">
           <div>Year</div>
-          <div>6 Month</div>
+          <div>Quarter</div>
           <div>Month</div>
         </div>
       </div>
