@@ -20,8 +20,8 @@ const DepartmentKey = () => {
               className="departmentKey__item--color"
               style={{
                 backgroundColor: departmentColors.Transport,
-                height: "10px",
-                width: "10px",
+                height: "15px",
+                width: "15px",
               }}
             >
               {" "}
@@ -33,8 +33,8 @@ const DepartmentKey = () => {
               className="departmentKey__item--color"
               style={{
                 backgroundColor: departmentColors.Economy,
-                height: "10px",
-                width: "10px",
+                height: "15px",
+                width: "15px",
               }}
             ></div>
             <div className="departmentKey__item--text">Economy</div>
@@ -44,8 +44,8 @@ const DepartmentKey = () => {
               className="departmentKey__item--color"
               style={{
                 backgroundColor: departmentColors.Environment,
-                height: "10px",
-                width: "10px",
+                height: "15px",
+                width: "15px",
               }}
             ></div>
             <div className="departmentKey__item--text">Environment</div>
@@ -55,8 +55,8 @@ const DepartmentKey = () => {
               className="departmentKey__item--color"
               style={{
                 backgroundColor: departmentColors.Environment,
-                height: "10px",
-                width: "10px",
+                height: "15px",
+                width: "15px",
               }}
             ></div>
             <div className="departmentKey__item--text">Housing</div>
@@ -66,8 +66,8 @@ const DepartmentKey = () => {
               className="departmentKey__item--color"
               style={{
                 backgroundColor: departmentColors.Skills,
-                height: "10px",
-                width: "10px",
+                height: "15px",
+                width: "15px",
               }}
             ></div>
             <div className="departmentKey__item--text">Skills</div>
@@ -77,8 +77,8 @@ const DepartmentKey = () => {
               className="departmentKey__item--color"
               style={{
                 backgroundColor: departmentColors.Strategy,
-                height: "10px",
-                width: "10px",
+                height: "15px",
+                width: "15px",
               }}
             ></div>
             <div className="departmentKey__item--text">Strategy</div>
