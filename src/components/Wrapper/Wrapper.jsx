@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-// import { YearView } from "../YearView/YearView";
+import React from "react";
 // import { SixMonthView } from "../SixMonthView/SixMonthView";
+// import  YearView  from "../YearView/YearView";
 import "./Wrapper.css";
 import Logo from "../../assets/logo.svg";
 import SwitchesContainer from "../SwitchContainer/SwitchContainer";
