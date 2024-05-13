@@ -1,9 +1,7 @@
-import { useState } from "react";
+
 import "./SwitchContainer.css";
 
-const SwitchesContainer = () => {
-  const [selectedPlan, setSelectedPlan] = useState("Yearly");
-
+const SwitchesContainer = ({ selectedPlan, setSelectedPlan }) => {
   const handlePlanChange = (event) => {
     setSelectedPlan(event.target.value);
   };
