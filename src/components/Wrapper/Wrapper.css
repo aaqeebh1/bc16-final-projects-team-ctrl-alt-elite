@@ -26,7 +26,19 @@ header {
 .nav-bar {
   display: flex;
   flex-direction: row;
-  margin-left: 200px;
-  height: 112px;
+  width: 900px;
+  margin-left: 100px;
+  height: 164px;
+  /* margin: 0 auto; */
+}
+.nav-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: end;
+  margin: 0 200px;
 }
 
+.year {
+  margin-right: 200px;
+}

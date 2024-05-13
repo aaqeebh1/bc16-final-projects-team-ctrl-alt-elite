@@ -5,9 +5,9 @@
   background-color: #f2f2f2; /* Set background color to grey */
   padding: 20px; 
   margin-top: 5px;
-  position: absolute; 
+  /* position: absolute; 
   top: 10%; 
-  left: 53%;
+  left: 53%; */
   border-radius: 10px;  
   z-index: -1; 
 }

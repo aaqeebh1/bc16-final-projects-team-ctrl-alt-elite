@@ -8,6 +8,7 @@ import DepartmentKey from "../DepartmentKey/DepartmentKey";
 import EventTypeKey from "../EventTypeKey/EventTypeKey";
 
 const Wrapper = () => {
+  const year = new Date().getFullYear();
   return (
     <>
       {/* Header -> logo -> comms -> dashboard*/}
@@ -25,9 +26,12 @@ const Wrapper = () => {
       </header>
       {/* Navbar -> current year -> view toggle -> departmnent keys -> event type key */}
       <nav className="nav-bar">
+        <div className="nav-wrapper">
+          <h1 className="year">{year}</h1>
         <SwitchesContainer />
          <DepartmentKey /> 
         <EventTypeKey/>
+        </div>
       </nav>
       {/* <YearView />
       <SixMonthView /> */}
