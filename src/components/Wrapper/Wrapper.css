@@ -64,7 +64,8 @@ header {
   height: 74%;
   width: 100%;
   /* background-color: red; */
-  border: 1px solid black;
-  border-radius: 10px;
+  /* border: 1px solid black;
+  border-radius: 10px; */
   margin-top: 20px;
+  overflow: hidden;
 }
