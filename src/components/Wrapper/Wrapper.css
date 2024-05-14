@@ -5,7 +5,8 @@ header {
   flex-direction: row;
   background-color: var(--header-background);
   color: white;
-  font-family: var(--header-font);
+  font-family: var(--main-font);
+  font-variation-settings: "wght" 700;
   height: 56px;
   margin: 0 auto;
   align-items: center;
