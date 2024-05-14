@@ -1,12 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,700;1,9..40,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 * {
   margin: 0;
   padding: 0;
+  font-family: var(--main-font);
 }
 
 :root {
-  --header-font: "DM Sans", sans-serif;
+  --main-font: "DM Sans", sans-serif;
   --header-background: #231f20;
   --background-color: #f3f2f1;
 }
