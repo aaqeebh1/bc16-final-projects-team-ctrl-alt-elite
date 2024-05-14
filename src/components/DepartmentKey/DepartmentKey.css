@@ -1,6 +1,8 @@
 .departmentKey-container {
   display: grid;
   height: 90px;
+  min-width: 250px;
+  max-width: 250px;
   border: 1px solid #CCCCCC; /* Add a border to the container */
   background-color: #f2f2f2; /* Set background color to grey */
   padding: 20px; 
@@ -10,6 +12,7 @@
   left: 53%; */
   border-radius: 10px;  
   z-index: -1; 
+  font-variation-settings: 'wght' 400;
 }
 
 .departmentKey {
@@ -20,7 +23,7 @@
 
 .departmentKey__item {
   display: flex;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .departmentKey__item--color {
