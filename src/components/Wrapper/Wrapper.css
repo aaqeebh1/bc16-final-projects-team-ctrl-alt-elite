@@ -10,16 +10,19 @@ header {
   height: 56px;
   margin: 0 auto;
   align-items: center;
+  text-wrap: nowrap;
+
 }
 .header-title-wrapper {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   margin: 0 200px;
 }
 
 .logo-img {
-  margin-left: 400px;
+  margin-left: 200px;
 }
 
 /* nav-bar css */
@@ -27,23 +30,30 @@ header {
 .nav-bar {
   display: flex;
   flex-direction: row;
-  width: 900px;
-  margin-left: 100px;
+  /* margin-left: 100px; */
   height: 145px;
   /* margin: 0 auto; */
 }
 .nav-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  /* grid-template-columns: repeat(4, 1fr); */
   gap: 20px;
   align-items: end;
-  margin: 0 200px;
+    width: 100%;
+    margin: 0 auto;
+  /* margin: 0 200px; */
+}
+.nav-bar h1 {
+  line-height: 40px;
 }
 
 .year {
   font-size: 48px;
   margin-right: 200px;
+  flex: 1;
 }
+
+/* window view css */
 .wrapper-container {
   height: 100vh;
   width: 95%;
@@ -54,7 +64,8 @@ header {
   height: 74%;
   width: 100%;
   /* background-color: red; */
-  border: 1px solid black;
-  border-radius: 10px;
+  /* border: 1px solid black;
+  border-radius: 10px; */
   margin-top: 20px;
+  overflow: hidden;
 }

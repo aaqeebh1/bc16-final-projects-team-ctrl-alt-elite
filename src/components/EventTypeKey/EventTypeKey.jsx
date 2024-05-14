@@ -34,7 +34,7 @@ const EventTypeKey = () => {
                     <div className="event-type-key__text">Birthday</div>
                 </div>
                 <div className="event-type-key__item">
-                    <div className="event-type-key__icon"></div>
+                    <div className="event-type-key__icon">🐸</div>
                     <div className="event-type-key__text">Birthday</div>
                 </div>
             </div>

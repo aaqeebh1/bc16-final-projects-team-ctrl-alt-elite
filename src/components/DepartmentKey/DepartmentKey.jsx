@@ -3,13 +3,25 @@ import "./DepartmentKey.css";
 
 const DepartmentKey = () => {
   const departmentColors = {
-    Transport: "#FF0000",
-    Economy: "#0000FF",
-    Environment: "#00FF00",
-    Housing: "#FFFF00",
-    Skills: "#FFA500",
-    Strategy: "#800080",
+    Transport: "#9F8FEF",
+    Housing: "#6CC3E0",
+    Skills: "#F5CD47",
+    NetZero: "#94C748",
+    Internal: "#FEA362",
+    Business: "#F87168",
   };
+
+  // BGWM - #F87168 (Business)
+
+// Internal - #FEA362 (Internal)
+
+// ESHC - #F5CD47 (Skills)
+
+// SENZ - #94C748 (Net Zero)
+
+// HPR - #6CC3E0 (Housing)
+
+// Transport - #9F8FEF (Transport)
 
   return (
     <>
@@ -23,38 +35,36 @@ const DepartmentKey = () => {
                 height: "15px",
                 width: "15px",
               }}
-            >
-              {" "}
-            </div>
+            ></div>
             <div className="departmentKey__item--text">Transport</div>
           </div>
           <div className="departmentKey__item">
             <div
               className="departmentKey__item--color"
               style={{
-                backgroundColor: departmentColors.Economy,
+                backgroundColor: departmentColors.Business,
                 height: "15px",
                 width: "15px",
               }}
             ></div>
-            <div className="departmentKey__item--text">Economy</div>
+            <div className="departmentKey__item--text">Business</div>
           </div>
           <div className="departmentKey__item">
             <div
               className="departmentKey__item--color"
               style={{
-                backgroundColor: departmentColors.Environment,
+                backgroundColor: departmentColors.NetZero,
                 height: "15px",
                 width: "15px",
               }}
             ></div>
-            <div className="departmentKey__item--text">Environment</div>
+            <div className="departmentKey__item--text">Net Zero</div>
           </div>
           <div className="departmentKey__item">
             <div
               className="departmentKey__item--color"
               style={{
-                backgroundColor: departmentColors.Environment,
+                backgroundColor: departmentColors.Housing,
                 height: "15px",
                 width: "15px",
               }}
@@ -76,12 +86,12 @@ const DepartmentKey = () => {
             <div
               className="departmentKey__item--color"
               style={{
-                backgroundColor: departmentColors.Strategy,
+                backgroundColor: departmentColors.Internal,
                 height: "15px",
                 width: "15px",
               }}
             ></div>
-            <div className="departmentKey__item--text">Strategy</div>
+            <div className="departmentKey__item--text">Internal</div>
           </div>
         </div>
       </div>
