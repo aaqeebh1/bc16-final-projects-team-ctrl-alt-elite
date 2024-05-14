@@ -13,6 +13,7 @@ export default function SixMonthView() {
       TooltipContent={() => null}
       TaskListHeader={() => null}
       TaskListTable={() => null}
+      ganttHeight={window.innerHeight * 0.66}
     />
   );
 }
