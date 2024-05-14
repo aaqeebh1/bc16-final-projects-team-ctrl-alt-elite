@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 // import { SixMonthView } from "../SixMonthView/SixMonthView";
-// import  YearView  from "../YearView/YearView";
+import YearView from "../YearView/YearView";
 import "./Wrapper.css";
 import Logo from "../../assets/logo.svg";
 import SwitchesContainer from "../SwitchContainer/SwitchContainer";
 import DepartmentKey from "../DepartmentKey/DepartmentKey";
 import EventTypeKey from "../EventTypeKey/EventTypeKey";
+import SixMonthView from "../SixMonthView/SixMonthView";
 
 const Wrapper = () => {
   const [selectedPlan, setSelectedPlan] = useState("Yearly");
@@ -39,14 +40,10 @@ const Wrapper = () => {
           </div>
         </nav>
         <div className="view-window">
-          {selectedPlan === "Yearly" && <h1>Yearly View</h1>}
-          {selectedPlan === "Quarterly" && <h1>Quartely View</h1>}
+          {selectedPlan === "Yearly" && <YearView />}
+          {selectedPlan === "Quarterly" && <SixMonthView />}
           {selectedPlan === "Monthly" && <h1>Monthly</h1>}
-          {/* <YearView />
-          
-      <SixMonthView /> */}
         </div>
-        {/* Magnifiying zoom toggle */}
       </div>
     </>
   );
