@@ -7,35 +7,35 @@ const EventTypeKey = () => {
             <div className="event-type-key">
                 <div className="event-type-key__item">
                     <div className="event-type-key__icon">☎️</div>
-                    <div className="event-type-key__text">Birthday</div>
+                    <div className="event-type-key__text">Event</div>
                 </div>
                 <div className="event-type-key__item">
                     <div className="event-type-key__icon">✅</div>
-                    <div className="event-type-key__text">Birthday</div>
+                    <div className="event-type-key__text">Event</div>
                 </div>
                 <div className="event-type-key__item">
                     <div className="event-type-key__icon">📆</div>
-                    <div className="event-type-key__text">Birthday</div>
+                    <div className="event-type-key__text">Event</div>
                 </div>
                 <div className="event-type-key__item">
                     <div className="event-type-key__icon">📲</div>
-                    <div className="event-type-key__text">Birthday</div>
+                    <div className="event-type-key__text">Event</div>
                 </div>
                 <div className="event-type-key__item">
                     <div className="event-type-key__icon">🎬</div>
-                    <div className="event-type-key__text">Birthday</div>
+                    <div className="event-type-key__text">Event</div>
                 </div>
                 <div className="event-type-key__item">
                     <div className="event-type-key__icon">🖥️</div>
-                    <div className="event-type-key__text">Birthday</div>
+                    <div className="event-type-key__text">Event</div>
                 </div>
                 <div className="event-type-key__item">
                     <div className="event-type-key__icon">📊</div>
-                    <div className="event-type-key__text">Birthday</div>
+                    <div className="event-type-key__text">Event</div>
                 </div>
                 <div className="event-type-key__item">
                     <div className="event-type-key__icon">🐸</div>
-                    <div className="event-type-key__text">Birthday</div>
+                    <div className="event-type-key__text">Event</div>
                 </div>
             </div>
             

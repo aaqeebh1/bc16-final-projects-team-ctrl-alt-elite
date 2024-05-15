@@ -1,26 +1,28 @@
-.event-type-key{  
-  display: grid;    
+.event-type-key {
+  display: grid;
   margin-top: 10px;
   height: 90px;
   width: 200px;
   column-gap: 20px;
   row-gap: 5px;
-  border: 1px solid #CCCCCC; /* Add a border to the container */
-  background-color: #f2f2f2; /* Set background color to grey */
-  padding: 20px; 
+  border: 1px solid #88878727; /* Add a border to the container */
+  background: var(--switches-bg-color); /* Set background color to grey */
+  padding: 20px;
   margin-top: 5px;
   /* position: absolute; 
   top: 10%; 
   left: 75%; */
-  border-radius: 10px;  
-  z-index: -1; 
+  border-radius: 10px;
+  z-index: -1;
   grid-template-columns: repeat(2, 1fr);
+  -webkit-box-shadow: 8px 8px 18px #d9d9d9;
+  -moz-box-shadow: 8px 8px 18px #d9d9d9;
+  box-shadow:  8px 8px 18px #d9d9d9;
 }
 .event-type-key__item {
-    display: flex;
+  display: flex;
   align-items: center;
   margin-right: 10px;
-  
 }
 
 .event-type-key__icon {

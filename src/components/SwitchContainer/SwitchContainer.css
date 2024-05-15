@@ -14,14 +14,15 @@
   align-items: center;
   padding: 0;
   background: var(--switches-bg-color);
-  background-color: rgb(228, 222, 227);
   line-height: 3rem;
   border-radius: 0.7rem;
-  border: solid 1px #888787;
+  border: solid 1px #88878727;
   /* top: 22%;
   left: 25%; */
   margin-right: 20px;
-  
+  -webkit-box-shadow: 8px 8px 18px #d9d9d9;
+  -moz-box-shadow: 8px 8px 18px #d9d9d9;
+  box-shadow:  8px 8px 18px #d9d9d9;
 }
 
 /* input (radio) for toggling. hidden - use labels for clicking on */
@@ -56,7 +57,7 @@
 .switch {
   margin-top: 5px;
   border-radius: 0.65rem;
-  background: var(--switch-bg-color);
+  background: #aaaaaa;
   height: 30px;
 }
 
