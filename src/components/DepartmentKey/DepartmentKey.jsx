@@ -1,7 +1,7 @@
 import React from "react";
 import "./DepartmentKey.css";
 
-const DepartmentKey = () => {
+const DepartmentKey = ({ handleDepartmentSelection }) => {
   const departmentColors = {
     Transport: "#9F8FEF",
     Housing: "#6CC3E0",
@@ -13,21 +13,24 @@ const DepartmentKey = () => {
 
   // BGWM - #F87168 (Business)
 
-// Internal - #FEA362 (Internal)
+  // Internal - #FEA362 (Internal)
 
-// ESHC - #F5CD47 (Skills)
+  // ESHC - #F5CD47 (Skills)
 
-// SENZ - #94C748 (Net Zero)
+  // SENZ - #94C748 (Net Zero)
 
-// HPR - #6CC3E0 (Housing)
+  // HPR - #6CC3E0 (Housing)
 
-// Transport - #9F8FEF (Transport)
+  // Transport - #9F8FEF (Transport)
 
   return (
     <>
       <div className="departmentKey-container">
         <div className="departmentKey">
-          <div className="departmentKey__item">
+          <div
+            className="departmentKey__item"
+            onClick={() => handleDepartmentSelection("Transport")}
+          >
             <div
               className="departmentKey__item--color"
               style={{
@@ -38,7 +41,10 @@ const DepartmentKey = () => {
             ></div>
             <div className="departmentKey__item--text">Transport</div>
           </div>
-          <div className="departmentKey__item">
+          <div
+            className="departmentKey__item"
+            onClick={() => handleDepartmentSelection("Business")}
+          >
             <div
               className="departmentKey__item--color"
               style={{
@@ -49,7 +55,10 @@ const DepartmentKey = () => {
             ></div>
             <div className="departmentKey__item--text">Business</div>
           </div>
-          <div className="departmentKey__item">
+          <div
+            className="departmentKey__item"
+            onClick={() => handleDepartmentSelection("NetZero")}
+          >
             <div
               className="departmentKey__item--color"
               style={{
@@ -60,7 +69,10 @@ const DepartmentKey = () => {
             ></div>
             <div className="departmentKey__item--text">Net Zero</div>
           </div>
-          <div className="departmentKey__item">
+          <div
+            className="departmentKey__item"
+            onClick={() => handleDepartmentSelection("Housing")}
+          >
             <div
               className="departmentKey__item--color"
               style={{
@@ -71,7 +83,10 @@ const DepartmentKey = () => {
             ></div>
             <div className="departmentKey__item--text">Housing</div>
           </div>
-          <div className="departmentKey__item">
+          <div
+            className="departmentKey__item"
+            onClick={() => handleDepartmentSelection("Skills")}
+          >
             <div
               className="departmentKey__item--color"
               style={{
@@ -82,7 +97,10 @@ const DepartmentKey = () => {
             ></div>
             <div className="departmentKey__item--text">Skills</div>
           </div>
-          <div className="departmentKey__item">
+          <div
+            className="departmentKey__item"
+            onClick={() => handleDepartmentSelection("Internal")}
+          >
             <div
               className="departmentKey__item--color"
               style={{

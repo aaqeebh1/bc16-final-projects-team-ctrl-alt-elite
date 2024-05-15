@@ -8,9 +8,27 @@ import DepartmentKey from "../DepartmentKey/DepartmentKey";
 import EventTypeKey from "../EventTypeKey/EventTypeKey";
 import SixMonthView from "../SixMonthView/SixMonthView";
 
+const departments = {
+  NetZero: false,
+  Business: false,
+  Transport: false,
+  Housing: false,
+  Health: false,
+  Education: false,
+};
+
 const Wrapper = () => {
   const [selectedPlan, setSelectedPlan] = useState("Yearly");
+  const [selectedDepartments, setSelectedDepartments] = useState(departments);
   const year = new Date().getFullYear();
+
+  const handleDepartmentSelection = (department) => {
+    setSelectedDepartments({
+      ...selectedDepartments,
+      [department]: !selectedDepartments[department],
+    });
+  };
+
   return (
     <>
       {/* Header -> logo -> comms -> dashboard*/}
@@ -35,13 +53,19 @@ const Wrapper = () => {
               selectedPlan={selectedPlan}
               setSelectedPlan={setSelectedPlan}
             />
-            <DepartmentKey />
+            <DepartmentKey
+              handleDepartmentSelection={handleDepartmentSelection}
+            />
             <EventTypeKey />
           </div>
         </nav>
         <div className="view-window">
-          {selectedPlan === "Yearly" && <YearView />}
-          {selectedPlan === "Quarterly" && <SixMonthView />}
+          {selectedPlan === "Yearly" && (
+            <YearView selectedDepartments={selectedDepartments} />
+          )}
+          {selectedPlan === "Quarterly" && (
+            <SixMonthView selectedDepartments={selectedDepartments} />
+          )}
           {selectedPlan === "Monthly" && <h1>Monthly</h1>}
         </div>
       </div>
