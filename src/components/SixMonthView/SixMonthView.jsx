@@ -1,56 +1,80 @@
-import { Gantt, ViewMode } from "gantt-task-react";
+import {Gantt, ViewMode} from "gantt-task-react";
 import "gantt-task-react/dist/index.css";
-import tasks from "../../assets/DummyData";
-import { useEffect, useState } from "react";
+import './SixMonthView.css';
+import tasks from "../../assets/DummyData.js";
+import {useEffect, useState} from "react";
 
-export default function SixMonthView({ selectedDepartments }) {
+
+export default function SixMonthView({selectedDepartments}) {
   const [filterTasks, setFilterTasks] = useState([]);
-  const [expandedTasks, setExpandedTasks] = useState({});
+  const [viewDate, setViewDate] = useState(new Date());
+
 
   useEffect(() => {
     const filteredTasks = tasks.filter((task) =>
-      Object.keys(selectedDepartments).some(
-        (dept) => dept === task.department && selectedDepartments[dept]
-      )
+        Object.keys(selectedDepartments).some(
+            (dept) => dept === task.department && selectedDepartments[dept]
+        )
     );
     setFilterTasks(filteredTasks);
   }, [selectedDepartments]);
 
-    const toggleTask = (taskId) => {
-      setExpandedTasks((prevState) => ({
-        ...prevState,
-        [taskId]: !prevState[taskId],
-      }));
-    };
 
-    const getVisibleTasks = (tasks) => {
-      const result = [];
-      const addTasks = (taskList) => {
-        taskList.forEach((task) => {
-          result.push(task);
-          if (task.children && expandedTasks[task.id]) {
-            addTasks(task.children);
-          }
-        });
-      };
-      addTasks(tasks);
-      return result;
-    };
-
-    const visibleTasks = getVisibleTasks(filterTasks);
+  const deleteSidebar = {
+    TooltipContent: () => null,
+    TaskListHeader: () => null,
+    TaskListTable: () => null,
+  };
 
 
   return (
-    <Gantt 
-      tasks={filterTasks.length ? filterTasks : tasks}
-      viewMode={ViewMode.Month}
-      viewDate={new Date()}
-      columnWidth={window.innerWidth * 0.33}
-      rowHeight={50}
-      TooltipContent={() => null}
-      TaskListHeader={() => null}
-      TaskListTable={() => null}
-      ganttHeight={window.innerHeight * 0.66}
-    />
+      <>
+        <div className="buttonWrapper">
+          <button className="monthButton" type="button" onClick={() => {
+            let newDate = new Date(viewDate);
+
+
+            if (newDate.getMonth() === 0) {
+              newDate.setFullYear(newDate.getFullYear() - 1);
+              newDate.setMonth(11);
+            } else {
+              newDate.setMonth(newDate.getMonth() - 1);
+            }
+
+
+            setViewDate(newDate);
+          }}>{"<"}
+          </button>
+          <button className="monthButton" type="button" onClick={() => {
+            let newDate = new Date(); // Get current date
+            setViewDate(newDate);
+          }}>Today
+          </button>
+          <button className="monthButton" type="button" onClick={() => {
+            let newDate = new Date(viewDate);
+
+
+            if (newDate.getMonth() === 11) {
+              newDate.setFullYear(newDate.getFullYear() + 1);
+              newDate.setMonth(0);
+            } else {
+              newDate.setMonth(newDate.getMonth() + 1);
+            }
+
+
+            setViewDate(newDate);
+          }}>{">"}
+          </button>
+        </div>
+        <Gantt
+            tasks={filterTasks.length ? filterTasks : tasks}
+            viewMode={ViewMode.Month}
+            columnWidth={window.innerWidth * 0.33}
+            rowHeight={50}
+            viewDate={viewDate}
+            ganttHeight={window.innerHeight * 0.66}
+            {...deleteSidebar}
+        />
+      </>
   );
 }
