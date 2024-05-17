@@ -49,7 +49,7 @@ export default function SixMonthView({ selectedDepartments }) {
   }, [selectedDepartments, tasks, windowStart, windowEnd]);
 
   const deleteSidebar = {
-    TooltipContent: () => null,
+    // TooltipContent: () => null,
     TaskListHeader: () => null,
     TaskListTable: () => null,
   };
