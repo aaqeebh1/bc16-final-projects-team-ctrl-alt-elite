@@ -1,8 +1,8 @@
 .departmentKey-container {
   display: grid;
-  height: 90px;
-  min-width: 250px;
-  max-width: 250px;
+  height: 70px;
+  min-width: 500px;
+  max-width: 500px;
   border: 1px solid #88878727; /* Add a border to the container */
   background: var(--switches-bg-color);
   padding: 20px;
@@ -19,7 +19,7 @@
 
 .departmentKey {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
 }
 

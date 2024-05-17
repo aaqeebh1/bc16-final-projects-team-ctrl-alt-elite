@@ -18,9 +18,10 @@ const departments = {
 };
 
 const Wrapper = () => {
+  const [viewDate, setViewDate] = useState(new Date());
   const [selectedPlan, setSelectedPlan] = useState("Yearly");
   const [selectedDepartments, setSelectedDepartments] = useState(departments);
-  const year = new Date().getFullYear();
+  const year = viewDate.getFullYear();
 
   const handleDepartmentSelection = (department) => {
     setSelectedDepartments({
@@ -28,6 +29,26 @@ const Wrapper = () => {
       [department]: !selectedDepartments[department],
     });
   };
+
+  function TodayDate() {
+    // Get current date
+    setViewDate(new Date());
+  }
+
+  function ForwardMonth() {
+    let newDate = new Date(viewDate);
+    newDate.getMonth() === 11
+      ? newDate.setFullYear(newDate.getFullYear() + 1) && newDate.setMonth(0)
+      : newDate.setMonth(newDate.getMonth() + 1);
+    setViewDate(newDate);
+  }
+  function BackwardMonth() {
+    let newDate = new Date(viewDate);
+    newDate.getMonth() === 0
+      ? newDate.setFullYear(newDate.getFullYear() - 1) && newDate.setMonth(11)
+      : newDate.setMonth(newDate.getMonth() - 1);
+    setViewDate(newDate);
+  }
 
   return (
     <>
@@ -49,6 +70,27 @@ const Wrapper = () => {
         <nav className="nav-bar">
           <div className="nav-wrapper">
             <h1 className="year">{year}</h1>
+            <div className="buttonWrapper">
+              <button
+                className="monthButton"
+                type="button"
+                onClick={BackwardMonth}
+              >
+                {"<"}
+              </button>
+
+              <button className="monthButton" type="button" onClick={TodayDate}>
+                Today
+              </button>
+
+              <button
+                className="monthButton"
+                type="button"
+                onClick={ForwardMonth}
+              >
+                {">"}
+              </button>
+            </div>
             <SwitchesContainer
               selectedPlan={selectedPlan}
               setSelectedPlan={setSelectedPlan}
@@ -61,10 +103,18 @@ const Wrapper = () => {
         </nav>
         <div className="view-window">
           {selectedPlan === "Yearly" && (
-            <YearView selectedDepartments={selectedDepartments} />
+            <YearView
+              selectedDepartments={selectedDepartments}
+              setViewDate={setViewDate}
+              viewDate={viewDate}
+            />
           )}
           {selectedPlan === "Quarterly" && (
-            <SixMonthView selectedDepartments={selectedDepartments} />
+            <SixMonthView
+              selectedDepartments={selectedDepartments}
+              setViewDate={setViewDate}
+              viewDate={viewDate}
+            />
           )}
           {selectedPlan === "Monthly" && <h1>Monthly</h1>}
         </div>

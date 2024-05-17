@@ -4,9 +4,9 @@ import "./SixMonthView.css";
 import tasks from "../../assets/DummyData.js";
 import { useEffect, useState } from "react";
 
-export default function SixMonthView({ selectedDepartments }) {
+export default function SixMonthView({ selectedDepartments, setViewDate, viewDate }) {
   const [filterTasks, setFilterTasks] = useState([]);
-  const [viewDate, setViewDate] = useState(new Date());
+  // const [viewDate, setViewDate] = useState(new Date());
   const [windowStart, setWindowStart] = useState(new Date()); //
   const [windowEnd, setWindowEnd] = useState(
     new Date(new Date().setMonth(new Date().getMonth() + 2))
@@ -56,60 +56,17 @@ export default function SixMonthView({ selectedDepartments }) {
 
   return (
     <>
-      <div className="buttonWrapper">
-        <button
-          className="monthButton"
-          type="button"
-          onClick={() => {
-            let newDate = new Date(viewDate);
-            if (newDate.getMonth() === 0) {
-              newDate.setFullYear(newDate.getFullYear() - 1);
-              newDate.setMonth(11);
-            } else {
-              newDate.setMonth(newDate.getMonth() - 1);
-            }
-            setViewDate(newDate);
-          }}
-        >
-          {"<"}
-        </button>
-
-        <button
-          className="monthButton"
-          type="button"
-          onClick={() => {
-            let newDate = new Date(); // Get current date
-            setViewDate(newDate);
-          }}
-        >
-          Today
-        </button>
-
-        <button
-          className="monthButton"
-          type="button"
-          onClick={() => {
-            let newDate = new Date(viewDate);
-            if (newDate.getMonth() === 11) {
-              newDate.setFullYear(newDate.getFullYear() + 1);
-              newDate.setMonth(0);
-            } else {
-              newDate.setMonth(newDate.getMonth() + 1);
-            }
-            setViewDate(newDate);
-          }}
-        >
-          {">"}
-        </button>
-      </div>
+      
       <Gantt
         tasks={filterTasks.length ? filterTasks : tasks}
         viewMode={ViewMode.Month}
         columnWidth={window.innerWidth * 0.33}
-        rowHeight={50}
+        rowHeight={30}
+        barFill={95}
         viewDate={viewDate}
         ganttHeight={window.innerHeight * 0.66}
         {...deleteSidebar}
+        fontSize="16px"
       />
     </>
   );
