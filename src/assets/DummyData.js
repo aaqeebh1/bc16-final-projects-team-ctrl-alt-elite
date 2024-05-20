@@ -15,6 +15,8 @@ const tasks = [
     name: "Cycle to Work Scheme",
     type: "project",
     id: "Cycle to Work Scheme", // Changed to "Campaign 1"
+    blurb: "Hello Guys",
+    taskid: 1,
     hideChildren: false,
     isDisabled: false,
     progress: 100,

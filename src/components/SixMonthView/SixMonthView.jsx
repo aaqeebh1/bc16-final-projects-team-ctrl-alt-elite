@@ -2,7 +2,8 @@ import { Gantt, ViewMode } from "gantt-task-react";
 import "gantt-task-react/dist/index.css";
 import "./SixMonthView.css";
 import tasks from "../../assets/DummyData.js";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import HoverCard from "../HoverCard/HoverCard.jsx";
 
 export default function SixMonthView({ selectedDepartments, setViewDate, viewDate }) {
   const [filterTasks, setFilterTasks] = useState([]);
@@ -56,7 +57,7 @@ export default function SixMonthView({ selectedDepartments, setViewDate, viewDat
 
   return (
     <>
-      
+
       <Gantt
         tasks={filterTasks.length ? filterTasks : tasks}
         viewMode={ViewMode.Month}
@@ -67,6 +68,15 @@ export default function SixMonthView({ selectedDepartments, setViewDate, viewDat
         ganttHeight={window.innerHeight * 0.66}
         {...deleteSidebar}
         fontSize="16px"
+        //
+        TooltipContent={({task}) => <HoverCard
+            campaign={task.id}
+            depColor={task.styles.progressColor}
+            camType = "Campaign Type"
+            blurb = {task.blurb}
+            startDate={task.start}
+            endDate={task.end}
+        />}
       />
     </>
   );
