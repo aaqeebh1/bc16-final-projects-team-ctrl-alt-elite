@@ -54,7 +54,6 @@ export default function SixMonthView({ selectedDepartments, setViewDate, viewDat
     TaskListHeader: () => null,
     TaskListTable: () => null,
   };
-
   return (
     <>
 
@@ -68,12 +67,12 @@ export default function SixMonthView({ selectedDepartments, setViewDate, viewDat
         ganttHeight={window.innerHeight * 0.66}
         {...deleteSidebar}
         fontSize="16px"
-        //
-        TooltipContent={({task}) => <HoverCard
+        TooltipContent={
+        ({task}) => <HoverCard
             campaign={task.id}
             depColor={task.styles.progressColor}
-            camType = "Campaign Type"
             blurb = {task.blurb}
+            assigned = {task.assigned}
             startDate={task.start}
             endDate={task.end}
         />}
