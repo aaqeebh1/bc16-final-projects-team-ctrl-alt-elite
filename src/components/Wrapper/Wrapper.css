@@ -51,8 +51,8 @@ header {
 
 .year {
   font-size: 48px;
-  margin-right: 200px;
-  flex: 1;
+  /* margin-right: 200px; */
+  /* flex: 1; */
 }
 
 /* window view css */
@@ -71,7 +71,37 @@ header {
   border-radius: 10px; */
   /* margin-top: 20px; */
   margin-top: 20px;
-   /* -webkit-box-shadow: 10px 10px 103px -39px rgb(0, 0, 0);
+  /* -webkit-box-shadow: 10px 10px 103px -39px rgb(0, 0, 0);
   -moz-box-shadow: 10px 10px 103px -39px rgb(0, 0, 0);
   box-shadow: 10px 10px 103px -39px rgb(0, 0, 0); */
+}
+
+/* date button styling */
+.monthButton {
+  height: 32px;
+  background: #fff;
+  font-family: inherit;
+  padding: 0.5rem;
+  font-variation-settings: "wght" 700;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  -webkit-box-shadow: 8px 8px 18px #d9d9d9;
+  -moz-box-shadow: 8px 8px 18px #d9d9d9;
+  box-shadow: 8px 8px 18px #d9d9d9;
+}
+.buttonWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 450px;
+  margin-top: 20px;
+}
+
+._3zRJQ {
+  color: black !important;
+  fill: #494949 !important;
+  font-weight: 400 !important;
 }

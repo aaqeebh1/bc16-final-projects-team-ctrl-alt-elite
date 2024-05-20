@@ -4,7 +4,7 @@ import "./SixMonthView.css";
 import tasks from "../../assets/DummyData.js";
 import { useEffect, useState } from "react";
 
-export default function SixMonthView({ selectedDepartments, setViewDate, viewDate }) {
+export default function SixMonthView({ selectedDepartments, setViewDate, viewDate, todayDate }) {
   const [filterTasks, setFilterTasks] = useState([]);
   // const [viewDate, setViewDate] = useState(new Date());
   const [windowStart, setWindowStart] = useState(new Date()); //
@@ -43,9 +43,7 @@ export default function SixMonthView({ selectedDepartments, setViewDate, viewDat
           (taskStart <= windowStart && taskEnd >= windowEnd))
       );
     });
-
     setFilterTasks(filteredTasks);
-    console.log(filteredTasks);
   }, [selectedDepartments, tasks, windowStart, windowEnd]);
 
   const deleteSidebar = {
