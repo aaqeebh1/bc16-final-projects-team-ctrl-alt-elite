@@ -30,19 +30,19 @@ const Wrapper = () => {
     });
   };
 
-  function TodayDate() {
+  function todayDate() {
     // Get current date
     setViewDate(new Date());
   }
 
-  function ForwardMonth() {
+  function forwardMonth() {
     let newDate = new Date(viewDate);
     newDate.getMonth() === 11
       ? newDate.setFullYear(newDate.getFullYear() + 1) && newDate.setMonth(0)
       : newDate.setMonth(newDate.getMonth() + 1);
     setViewDate(newDate);
   }
-  function BackwardMonth() {
+  function backwardMonth() {
     let newDate = new Date(viewDate);
     newDate.getMonth() === 0
       ? newDate.setFullYear(newDate.getFullYear() - 1) && newDate.setMonth(11)
@@ -74,19 +74,19 @@ const Wrapper = () => {
               <button
                 className="monthButton"
                 type="button"
-                onClick={BackwardMonth}
+                onClick={backwardMonth}
               >
                 {"<"}
               </button>
 
-              <button className="monthButton" type="button" onClick={TodayDate}>
+              <button className="monthButton" type="button" onClick={todayDate}>
                 Today
               </button>
 
               <button
                 className="monthButton"
                 type="button"
-                onClick={ForwardMonth}
+                onClick={forwardMonth}
               >
                 {">"}
               </button>
@@ -98,7 +98,7 @@ const Wrapper = () => {
             <DepartmentKey
               handleDepartmentSelection={handleDepartmentSelection}
             />
-            <EventTypeKey />
+            <EventTypeKey selectedPlan={selectedPlan} />
           </div>
         </nav>
         <div className="view-window">
@@ -114,6 +114,7 @@ const Wrapper = () => {
               selectedDepartments={selectedDepartments}
               setViewDate={setViewDate}
               viewDate={viewDate}
+              todayDate={todayDate}
             />
           )}
           {selectedPlan === "Monthly" && <h1>Monthly</h1>}
