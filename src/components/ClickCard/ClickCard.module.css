@@ -42,6 +42,7 @@
 }
 
 .campaignTitle {
+	font-weight: 800;
 	display: flex;
 	width: 100%;
 	flex-flow: row nowrap;
@@ -51,17 +52,14 @@
 }
 .cross {
 	display: flex;
-	color: #fff;
 	justify-content: center;
 	align-items: center;
 	cursor : pointer;
 	aspect-ratio: 1/1;
-	background-color: #AAA;
-	border-radius: 50%;
+	width: 24px;
 	margin: 0 1rem;
 	padding: 0.8rem;
 	z-index : 1100;
-	font-size: 1.5rem;
 }
 
 

@@ -1,4 +1,5 @@
 import styles from './ClickCard.module.css'
+import Cross from '../../assets/Cross.svg'
 
 export default function ClickCard(props) {
     return (
@@ -7,7 +8,7 @@ export default function ClickCard(props) {
         >
             <div style={{background: props.depColor}} className={styles.campaignTitle}>
                 <span>{props.campaign}</span>
-                <span className={styles.cross} onClick={props.clickHere}> X </span>
+                <img src = {Cross} alt = 'cross' className={styles.cross} onClick={props.clickHere} />
             </div>
             <div className={styles.cardDetails}>
                 {props.blurbThree && props.blurbTwo && props.blurb ?
