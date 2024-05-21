@@ -66,7 +66,6 @@ export default function SixMonthView({ selectedDepartments, setViewDate, viewDat
         viewDate={viewDate}
         ganttHeight={window.innerHeight * 0.66}
         {...deleteSidebar}
-        fontSize="16px"
         TooltipContent={
         ({task}) => <HoverCard
             campaign={task.id}
