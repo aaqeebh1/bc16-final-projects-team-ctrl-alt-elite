@@ -7,7 +7,6 @@ const HoverCard = (props) => {
                 {props.campaign}
             </div>
             <div className="card-details">
-                <div className="campaign-type">
                     {props.blurb ?
                     <span className='blurb'>{props.blurb}</span> :
                         null
@@ -18,8 +17,7 @@ const HoverCard = (props) => {
                         :
                         null
                     }
-                </div>
-                <div className="campaign-date">
+                <div>
                     Starts: {props.startDate.toDateString()}
                     <br/>
                     Ends: {props.endDate.toDateString()}

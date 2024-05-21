@@ -1,0 +1,84 @@
+.clickCard {
+	display: flex;
+	flex-flow: column nowrap;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index                 : 999;
+	backdrop-filter         : blur(14px) saturate(100%);
+	-webkit-backdrop-filter : blur(14px) saturate(100%);
+	background-color        : rgba(255, 255, 255, 0.65);
+	border-radius: 12px;
+	box-shadow:  -11px 11px 22px #bdbdbd;
+	border                  : 1px solid rgba(255, 255, 255, 0.125);
+	height                  : fit-content;
+	width: 800px;
+}
+
+.wrapper {
+	user-select: none;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top:50%;
+	left: 50%;
+	transform               : translate(-50%, -50%);
+	z-index : 1000;
+	width: 100vw;
+	height: 100vh;
+	backdrop-filter: blur(16px) saturate(100%);
+	-webkit-backdrop-filter: blur(16px) saturate(100%);
+	border-radius: 12px;
+	transition: 0.35s all ease-in-out;
+}
+
+.cardDetails {
+	padding: 0.5rem;
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.campaignTitle {
+	display: flex;
+	width: 100%;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem;
+}
+.cross {
+	display: flex;
+	color: #fff;
+	justify-content: center;
+	align-items: center;
+	cursor : pointer;
+	aspect-ratio: 1/1;
+	background-color: #AAA;
+	border-radius: 50%;
+	margin: 0 1rem;
+	padding: 0.8rem;
+	z-index : 1100;
+	font-size: 1.5rem;
+}
+
+
+.campaignDates {
+	display: flex;
+	padding: 0.5rem;
+	width: 100%;
+	flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.blurb {
+	max-width:35em;
+	padding: 0.2rem 1rem;
+}
+
+.assignedTo {
+	width: 100%;
+	text-align: center;
+}
