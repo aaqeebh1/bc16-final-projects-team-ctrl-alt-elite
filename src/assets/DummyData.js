@@ -7,6 +7,15 @@ const departmentColors = {
   Business: "#F87168",
 };
 
+const displayOrder = {
+  Transport: 1,
+  Housing: 2,
+  Skills: 3,
+  NetZero: 4,
+  Internal: 5,
+  Business: 6,
+};
+
 const tasks = [
   {
     start: new Date(2024, 4, 15), // Earliest start date for Cycle to Work Scheme tasks
@@ -15,6 +24,7 @@ const tasks = [
     name: "Cycle to Work Scheme",
     type: "project",
     id: "Cycle to Work Scheme", // Changed to "Campaign 1"
+    owner: "Rebekah Anderson",
     hideChildren: false,
     isDisabled: false,
     progress: 100,
@@ -23,15 +33,17 @@ const tasks = [
       progressColor: departmentColors.Transport, // Reference departmentColors object
       progressSelectedColor: departmentColors.Transport,
       backgroundColor: departmentColors.Transport,
+      backgroundSelectedColor: departmentColors.Transport,
     },
   },
   {
-    start: new Date(2024, 2, 1), // Earliest start date for Improve Tenant Satisfaction tasks
-    end: new Date(2024, 11, 26), // Latest end date for Improve Tenant Satisfaction tasks
+    start: new Date(2024, 5, 1), // Earliest start date for Improve Tenant Satisfaction tasks
+    end: new Date(2024, 8, 27), // Latest end date for Improve Tenant Satisfaction tasks
     department: "Housing",
     name: "Improve Tenant Satisfaction",
     type: "project",
     id: "Improve Tenant Satisfaction", // Changed to "Campaign 2"
+    owner: "Timothy Bridge",
     hideChildren: false,
     isDisabled: false,
     progress: 100,
@@ -40,15 +52,17 @@ const tasks = [
       progressColor: departmentColors.Housing, // Reference departmentColors object
       progressSelectedColor: departmentColors.Housing,
       backgroundColor: departmentColors.Housing,
+      backgroundSelectedColor: departmentColors.Housing,
     },
   },
   {
-    start: new Date(2024, 3, 1), // Earliest start date for Promote Skills Development Programs tasks
-    end: new Date(2024, 7, 16), // Latest end date for Promote Skills Development Programs tasks
+    start: new Date(2024, 6, 1), // Earliest start date for Promote Skills Development Programs tasks
+    end: new Date(2025, 2, 16), // Latest end date for Promote Skills Development Programs tasks
     department: "Skills",
     name: "Promote Skills Development Programs",
     type: "project",
     id: "Promote Skills Development Programs", // Changed to "Campaign 3"
+    owner: "Aaqeeb Hussain",
     hideChildren: false,
     isDisabled: false,
     progress: 100,
@@ -57,6 +71,7 @@ const tasks = [
       progressColor: departmentColors.Skills, // Reference departmentColors object
       progressSelectedColor: departmentColors.Skills,
       backgroundColor: departmentColors.Skills,
+      backgroundSelectedColor: departmentColors.Skills,
     },
   },
   {
@@ -66,6 +81,7 @@ const tasks = [
     name: "Financial Planning",
     type: "project",
     id: "Financial Planning", // Changed to "Campaign 4"
+    owner: "Courtney Smith",
     hideChildren: false,
     isDisabled: false,
     progress: 100,
@@ -74,15 +90,17 @@ const tasks = [
       progressColor: departmentColors.Business, // Reference departmentColors object
       progressSelectedColor: departmentColors.Business,
       backgroundColor: departmentColors.Business,
+      backgroundSelectedColor: departmentColors.Business,
     },
   },
   {
-    start: new Date(2024, 1, 20), // Earliest start date for Marketing and Communications tasks
-    end: new Date(2024, 9, 11), // Latest end date for Marketing and Communications tasks
+    start: new Date(2024, 7, 20), // Earliest start date for Marketing and Communications tasks
+    end: new Date(2024, 11, 11), // Latest end date for Marketing and Communications tasks
     department: "Business",
     name: "Marketing and Communications",
     type: "project",
     id: "Marketing and Communications", // Changed to "Campaign 5"
+    owner: "Arion King",
     hideChildren: false,
     isDisabled: false,
     progress: 100,
@@ -91,15 +109,17 @@ const tasks = [
       progressColor: departmentColors.Business, // Reference departmentColors object
       progressSelectedColor: departmentColors.Business,
       backgroundColor: departmentColors.Business,
+      backgroundSelectedColor: departmentColors.Business,
     },
   },
   {
     start: new Date(2024, 6, 10), // Earliest start date for Business Development tasks (assuming related to Promote Sustainability)
-    end: new Date(2024, 6, 31), // Latest end date for Business Development tasks (assuming related to Promote Sustainability)
+    end: new Date(2024, 7, 31), // Latest end date for Business Development tasks (assuming related to Promote Sustainability)
     department: "NetZero",
     name: "Promote Sustainability",
     type: "project",
     id: "Promote Sustainability", // Changed to "Campaign 6"
+    owner: "Rebekah Anderson",
     hideChildren: false,
     isDisabled: false,
     progress: 100,
@@ -108,6 +128,7 @@ const tasks = [
       progressColor: departmentColors.NetZero, // Reference departmentColors object
       progressSelectedColor: departmentColors.NetZero,
       backgroundColor: departmentColors.NetZero,
+      backgroundSelectedColor: departmentColors.NetZero,
     },
   },
   {
@@ -117,6 +138,7 @@ const tasks = [
     name: "Raise Environmental Awareness",
     type: "project",
     id: "Raise Environmental Awareness", // New campaign
+    owner: "Timothy Bridge",
     hideChildren: false,
     isDisabled: false,
     progress: 100, // Assuming progress tracking not yet available
@@ -125,6 +147,7 @@ const tasks = [
       progressColor: departmentColors.NetZero, // Reference departmentColors object
       progressSelectedColor: departmentColors.NetZero,
       backgroundColor: departmentColors.NetZero,
+      backgroundSelectedColor: departmentColors.NetZero,
     },
   },
   {
@@ -134,6 +157,7 @@ const tasks = [
     name: "NetZero Strategy",
     type: "project",
     id: "NetZero Strategy", // New campaign
+    owner: "Courtney Smith",
     hideChildren: false,
     isDisabled: false,
     progress: 100, // Assuming progress tracking not yet available
@@ -142,6 +166,7 @@ const tasks = [
       progressColor: departmentColors.NetZero, // Reference departmentColors object
       progressSelectedColor: departmentColors.NetZero,
       backgroundColor: departmentColors.NetZero,
+      backgroundSelectedColor: departmentColors.NetZero,
     },
   },
 
@@ -154,6 +179,7 @@ const tasks = [
     type: "task", // Changed type to "task"
     id: "WMCA Cycle Safety Workshop",
     project: "Cycle to Work Scheme",
+    owner: "Aaqeeb Hussain",
     displayOrder: 1,
     isDisabled: false,
     progress: 100,
@@ -161,6 +187,7 @@ const tasks = [
       progressColor: departmentColors.Transport, // Reference departmentColors object
       progressSelectedColor: departmentColors.Transport,
       backgroundColor: departmentColors.Transport,
+      backgroundSelectedColor: departmentColors.Transport,
     },
   },
   {
@@ -170,6 +197,7 @@ const tasks = [
     name: "📅",
     type: "task",
     id: "WMCA Free Bike Maintenance Workshop",
+    owner: "Aaqeeb Hussain",
     project: "Cycle to Work Scheme",
     isDisabled: false,
     progress: 100,
@@ -178,6 +206,7 @@ const tasks = [
       progressColor: departmentColors.Transport, // Reference departmentColors object
       progressSelectedColor: departmentColors.Transport,
       backgroundColor: departmentColors.Transport,
+      backgroundSelectedColor: departmentColors.Transport,
     },
   },
   {
@@ -187,6 +216,7 @@ const tasks = [
     name: "📱",
     type: "task",
     id: "Promote Cycle to Work Scheme on Social Media",
+    owner: "Aaqeeb Hussain",
     project: "Cycle to Work Scheme",
     isDisabled: false,
     progress: 100,
@@ -195,6 +225,7 @@ const tasks = [
       progressColor: departmentColors.Transport, // Reference departmentColors object
       progressSelectedColor: departmentColors.Transport,
       backgroundColor: departmentColors.Transport,
+      backgroundSelectedColor: departmentColors.Transport,
     },
   },
   {
@@ -204,6 +235,7 @@ const tasks = [
     nname: "📅",
     type: "task",
     id: "WMCA Spooky Cycle Night Event",
+    owner: "Aaqeeb Hussain",
     project: "Cycle to Work Scheme",
     isDisabled: false,
     progress: 100,
@@ -212,17 +244,19 @@ const tasks = [
       progressColor: departmentColors.Transport, // Reference departmentColors object
       progressSelectedColor: departmentColors.Transport,
       backgroundColor: departmentColors.Transport,
+      backgroundSelectedColor: departmentColors.Transport,
     },
   },
 
   // Housing Campaigns
   {
-    start: new Date(2024, 2, 1),
-    end: new Date(2024, 2, 3),
+    start: new Date(2024, 5, 1),
+    end: new Date(2024, 5, 3),
     department: "Housing",
     name: "📧",
     type: "task", // Changed type to "task"
     id: "Annual Tenant Satisfaction Survey Reminder",
+    owner: "Aaqeeb Hussain",
     project: "Improve Tenant Satisfaction",
     isDisabled: false,
     progress: 100,
@@ -231,15 +265,17 @@ const tasks = [
       progressColor: departmentColors.Housing, // Reference departmentColors object
       progressSelectedColor: departmentColors.Housing,
       backgroundColor: departmentColors.Housing,
+      backgroundSelectedColor: departmentColors.Housing,
     },
   },
   {
-    start: new Date(2024, 4, 12), // 12th May
-    end: new Date(2024, 4, 14), // 13th May
+    start: new Date(2024, 6, 12), // 12th May
+    end: new Date(2024, 6, 14), // 13th May
     department: "Housing",
     name: "📅",
     type: "task",
     id: "Quarterly Tenant Satisfaction Forum",
+    owner: "Arion King",
     project: "Improve Tenant Satisfaction",
     isDisabled: false,
     progress: 100,
@@ -248,15 +284,17 @@ const tasks = [
       progressColor: departmentColors.Housing, // Reference departmentColors object
       progressSelectedColor: departmentColors.Housing,
       backgroundColor: departmentColors.Housing,
+      backgroundSelectedColor: departmentColors.Housing,
     },
   },
   {
-    start: new Date(2024, 11, 25), // 25th November
-    end: new Date(2024, 11, 27), // 26th November
+    start: new Date(2024, 8, 25), // 25th November
+    end: new Date(2024, 8, 27), // 26th November
     department: "Housing",
     name: "📧",
     type: "task",
     id: "WMCA Tenant Satisfaction Survey Invitation",
+    owner: "Arion King",
     project: "Improve Tenant Satisfaction",
     isDisabled: false,
     progress: 100,
@@ -265,18 +303,20 @@ const tasks = [
       progressColor: departmentColors.Housing, // Reference departmentColors object
       progressSelectedColor: departmentColors.Housing,
       backgroundColor: departmentColors.Housing,
+      backgroundSelectedColor: departmentColors.Housing,
     },
   },
 
   // Skills Campaigns
 
   {
-    start: new Date(2024, 7, 15),
-    end: new Date(2024, 7, 17),
+    start: new Date(2024, 6, 1),
+    end: new Date(2024, 6, 3),
     department: "Skills",
     name: "📱",
     type: "task", // Changed type to "task"
     id: "WMCA Skills Development Campaign: Social Media Blitz",
+    owner: "Arion King",
     project: "Promote Skills Development Programs",
     isDisabled: false,
     progress: 100,
@@ -285,15 +325,17 @@ const tasks = [
       progressColor: departmentColors.Skills, // Reference departmentColors object
       progressSelectedColor: departmentColors.Skills,
       backgroundColor: departmentColors.Skills,
+      backgroundSelectedColor: departmentColors.Skills,
     },
   },
   {
-    start: new Date(2024, 3, 1),
-    end: new Date(2024, 3, 3),
+    start: new Date(2024, 11, 1),
+    end: new Date(2024, 11, 3),
     department: "Skills",
     name: "📄",
     type: "task", // Changed type to "task"
     id: " Magazine Media Blitz",
+    owner: "Timothy Bridge",
     project: "Promote Skills Development Programs",
     isDisabled: false,
     progress: 100,
@@ -302,6 +344,26 @@ const tasks = [
       progressColor: departmentColors.Skills, // Reference departmentColors object
       progressSelectedColor: departmentColors.Skills,
       backgroundColor: departmentColors.Skills,
+      backgroundSelectedColor: departmentColors.Skills,
+    },
+  },
+  {
+    start: new Date(2025, 2, 14),
+    end: new Date(2025, 2, 16),
+    department: "Skills",
+    name: "🎥",
+    type: "task", // Changed type to "task"
+    id: " TV Media Blitz",
+    owner: "Timothy Bridge",
+    project: "Promote Skills Development Programs",
+    isDisabled: false,
+    progress: 100,
+    displayOrder: 3,
+    styles: {
+      progressColor: departmentColors.Skills, // Reference departmentColors object
+      progressSelectedColor: departmentColors.Skills,
+      backgroundColor: departmentColors.Skills,
+      backgroundSelectedColor: departmentColors.Skills,
     },
   },
   {
@@ -311,6 +373,7 @@ const tasks = [
     name: "🎥",
     type: "task",
     id: "WMCA Announces Budget Update",
+    owner: "Timothy Bridge",
     project: "Financial Planning",
     isDisabled: false,
     progress: 100,
@@ -319,6 +382,7 @@ const tasks = [
       progressColor: departmentColors.Business, // Reference departmentColors object
       progressSelectedColor: departmentColors.Business,
       backgroundColor: departmentColors.Business,
+      backgroundSelectedColor: departmentColors.Business,
     },
   },
   {
@@ -328,6 +392,7 @@ const tasks = [
     name: "📅",
     type: "task",
     id: "WMCA Quarterly Financial Review Meeting",
+    owner: "Timothy Bridge",
     project: "Financial Planning",
     isDisabled: false,
     progress: 100,
@@ -336,15 +401,17 @@ const tasks = [
       progressColor: departmentColors.Business, // Reference departmentColors object
       progressSelectedColor: departmentColors.Business,
       backgroundColor: departmentColors.Business,
+      backgroundSelectedColor: departmentColors.Business,
     },
   },
   {
-    start: new Date(2024, 1, 20), // 20th February
-    end: new Date(2024, 1, 22), // 21st February
+    start: new Date(2024, 7, 20), // 20th February
+    end: new Date(2024, 7, 22), // 21st February
     department: "Business",
     name: "📱",
     type: "task",
     id: "Promote WMCA Business Event on Social Media",
+    owner: "Timothy Bridge",
     project: "Marketing and Communications",
     isDisabled: false,
     progress: 100,
@@ -353,6 +420,7 @@ const tasks = [
       progressColor: departmentColors.Business, // Reference departmentColors object
       progressSelectedColor: departmentColors.Business,
       backgroundColor: departmentColors.Business,
+      backgroundSelectedColor: departmentColors.Business,
     },
   },
   {
@@ -362,6 +430,7 @@ const tasks = [
     name: "📧",
     type: "task",
     id: "WMCA Business Newsletter - October Edition",
+    owner: "Timothy Bridge",
     project: "Marketing and Communications",
     isDisabled: false,
     progress: 100,
@@ -370,6 +439,26 @@ const tasks = [
       progressColor: departmentColors.Business, // Reference departmentColors object
       progressSelectedColor: departmentColors.Business,
       backgroundColor: departmentColors.Business,
+      backgroundSelectedColor: departmentColors.Business,
+    },
+  },
+  {
+    start: new Date(2024, 11, 9), // 10th October
+    end: new Date(2024, 11, 11), // 11th October
+    department: "Business",
+    name: "📄",
+    type: "task",
+    id: "WMCA Business Newsletter",
+    owner: "Timothy Bridge",
+    project: "Marketing and Communications",
+    isDisabled: false,
+    progress: 100,
+    displayOrder: 5,
+    styles: {
+      progressColor: departmentColors.Business, // Reference departmentColors object
+      progressSelectedColor: departmentColors.Business,
+      backgroundColor: departmentColors.Business,
+      backgroundSelectedColor: departmentColors.Business,
     },
   },
 
@@ -380,6 +469,7 @@ const tasks = [
     name: "📅",
     type: "task",
     id: "WMCA Sustainable Living Workshop",
+    owner: "Timothy Bridge",
     project: "Promote Sustainability",
     isDisabled: false,
     progress: 100,
@@ -388,15 +478,17 @@ const tasks = [
       progressColor: departmentColors.NetZero, // Reference departmentColors object
       progressSelectedColor: departmentColors.NetZero,
       backgroundColor: departmentColors.NetZero,
+      backgroundSelectedColor: departmentColors.NetZero,
     },
   },
   {
-    start: new Date(2024, 6, 29), // 29th February (leap year!)
-    end: new Date(2024, 7, 1), // 1st March
+    start: new Date(2024, 9, 29), // 29th February (leap year!)
+    end: new Date(2024, 9, 30), // 1st March
     department: "NetZero",
     name: "📱",
     type: "task",
     id: "Green Choices",
+    owner: "Timothy Bridge",
     project: "Promote Sustainability",
     isDisabled: false,
     progress: 100,
@@ -405,6 +497,7 @@ const tasks = [
       progressColor: departmentColors.NetZero, // Reference departmentColors object
       progressSelectedColor: departmentColors.NetZero,
       backgroundColor: departmentColors.NetZero,
+      backgroundSelectedColor: departmentColors.NetZero,
     },
   },
   {
@@ -414,6 +507,7 @@ const tasks = [
     name: "📱",
     type: "task",
     id: "WMCA Celebrates Earth Day 1",
+    owner: "Timothy Bridge",
     project: "Raise Environmental Awareness",
     isDisabled: false,
     progress: 100,
@@ -422,6 +516,7 @@ const tasks = [
       progressColor: departmentColors.NetZero, // Reference departmentColors object
       progressSelectedColor: departmentColors.NetZero,
       backgroundColor: departmentColors.NetZero,
+      backgroundSelectedColor: departmentColors.NetZero,
     },
   },
   {
@@ -431,6 +526,7 @@ const tasks = [
     name: "📅",
     type: "task",
     id: "WMCA Celebrates Earth Day",
+    owner: "Timothy Bridge",
     project: "Raise Environmental Awareness",
     isDisabled: false,
     progress: 100,
@@ -439,6 +535,7 @@ const tasks = [
       progressColor: departmentColors.NetZero, // Reference departmentColors object
       progressSelectedColor: departmentColors.NetZero,
       backgroundColor: departmentColors.NetZero,
+      backgroundSelectedColor: departmentColors.NetZero,
     },
   },
   {
@@ -448,6 +545,7 @@ const tasks = [
     name: "🎥",
     type: "task",
     id: "WMCA Announces Progress on NetZero Initiatives",
+    owner: "Courtney Smith",
     project: "NetZero Strategy",
     isDisabled: false,
     progress: 100,
@@ -456,6 +554,7 @@ const tasks = [
       progressColor: departmentColors.NetZero, // Reference departmentColors object
       progressSelectedColor: departmentColors.NetZero,
       backgroundColor: departmentColors.NetZero,
+      backgroundSelectedColor: departmentColors.NetZero,
     },
   },
   {
@@ -465,6 +564,7 @@ const tasks = [
     name: "📅",
     type: "task",
     id: "WMCA NetZero Committee Meeting 1",
+    owner: "Courtney Smith",
     project: "NetZero Strategy",
     isDisabled: false,
     progress: 100,
@@ -473,6 +573,7 @@ const tasks = [
       progressColor: departmentColors.NetZero, // Reference departmentColors object
       progressSelectedColor: departmentColors.NetZero,
       backgroundColor: departmentColors.NetZero,
+      backgroundSelectedColor: departmentColors.NetZero,
     },
   },
   {
@@ -482,6 +583,7 @@ const tasks = [
     name: "📅",
     type: "task",
     id: "WMCA NetZero Committee Meeting",
+    owner: "Courtney Smith",
     project: "NetZero Strategy",
     isDisabled: false,
     progress: 100,
@@ -490,6 +592,7 @@ const tasks = [
       progressColor: departmentColors.NetZero, // Reference departmentColors object
       progressSelectedColor: departmentColors.NetZero,
       backgroundColor: departmentColors.NetZero,
+      backgroundSelectedColor: departmentColors.NetZero,
     },
   },
   {
@@ -499,6 +602,7 @@ const tasks = [
     name: "🎥", // Using the exact option provided
     type: "milestone", // Changed to "milestone"
     id: "Public Transport Improvement Report_Q2_2024",
+    owner: "Courtney Smith",
     project: "", // Left project blank
     isDisabled: false,
     progress: 100,
@@ -506,6 +610,7 @@ const tasks = [
       progressColor: departmentColors.Transport, // Reference departmentColors object
       progressSelectedColor: departmentColors.Transport,
       backgroundColor: departmentColors.Transport,
+      backgroundSelectedColor: departmentColors.Transport,
     },
   },
   {
@@ -515,6 +620,7 @@ const tasks = [
     name: "📧", // Using the exact option provided
     type: "milestone", // Changed to "milestone"
     id: "AnnualTenantSatisfactionSurvey_2024",
+    owner: "Courtney Smith",
     project: "", // Left project blank
     isDisabled: false,
     progress: 100,
@@ -522,6 +628,7 @@ const tasks = [
       progressColor: departmentColors.Housing, // Reference departmentColors object
       progressSelectedColor: departmentColors.Housing,
       backgroundColor: departmentColors.Housing,
+      backgroundSelectedColor: departmentColors.Housing,
     },
   },
   {
@@ -531,6 +638,7 @@ const tasks = [
     name: "📱", // Using the exact option provided
     type: "milestone", // Changed to "milestone"
     id: "ApprenticeshipSchemeApplicationsClosed_2024",
+    owner: "Courtney Smith",
     project: "", // Left project blank
     isDisabled: false,
     progress: 100,
@@ -538,6 +646,7 @@ const tasks = [
       progressColor: departmentColors.Skills, // Reference departmentColors object
       progressSelectedColor: departmentColors.Skills,
       backgroundColor: departmentColors.Skills,
+      backgroundSelectedColor: departmentColors.Skills,
     },
   },
   {
@@ -547,6 +656,7 @@ const tasks = [
     name: "📄", // Using the exact option provided
     type: "milestone", // Changed to "milestone"
     id: "FinancialPerformanceReport_Q1_2024",
+    owner: "Courtney Smith",
     project: "", // Left project blank
     isDisabled: false,
     progress: 100,
@@ -554,6 +664,7 @@ const tasks = [
       progressColor: departmentColors.Business, // Reference departmentColors object
       progressSelectedColor: departmentColors.Business,
       backgroundColor: departmentColors.Business,
+      backgroundSelectedColor: departmentColors.Business,
     },
   },
   {
@@ -563,6 +674,7 @@ const tasks = [
     name: "📅", // Using the exact option provided
     type: "milestone", // Changed to "milestone"
     id: "NetZeroStrategyProgressReview_2024",
+    owner: "Courtney Smith",
     project: "", // Left project blank
     isDisabled: false,
     progress: 100,
@@ -570,6 +682,7 @@ const tasks = [
       progressColor: departmentColors.NetZero, // Reference departmentColors object
       progressSelectedColor: departmentColors.NetZero,
       backgroundColor: departmentColors.NetZero,
+      backgroundSelectedColor: departmentColors.NetZero,
     },
   },
 ];
