@@ -109,8 +109,9 @@ header {
   background-color: #ffffff56;
 }
 
-._3zRJQ {
+._3zRJQ, .rbc-event-content {
   color: black !important;
   fill: #494949 !important;
   font-weight: 400 !important;
+  font-size: 16px !important;
 }
