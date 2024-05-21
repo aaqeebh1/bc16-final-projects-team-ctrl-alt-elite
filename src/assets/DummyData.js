@@ -15,9 +15,6 @@ const tasks = [
     name: "Cycle to Work Scheme",
     type: "project",
     id: "Cycle to Work Scheme", // Changed to "Campaign 1"
-    blurb:"It was the best of times, it was the worst of times. One Ring to rule them all." +
-        " Party in the USA, Moves like Jagger. I'll write your name. There and back again." +
-        " One does not simply walk into Mordor.",
     taskid: 1,
     hideChildren: false,
     isDisabled: false,
