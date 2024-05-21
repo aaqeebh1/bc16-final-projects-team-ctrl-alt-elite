@@ -7,6 +7,7 @@ import SwitchesContainer from "../SwitchContainer/SwitchContainer";
 import DepartmentKey from "../DepartmentKey/DepartmentKey";
 import EventTypeKey from "../EventTypeKey/EventTypeKey";
 import SixMonthView from "../SixMonthView/SixMonthView";
+import MonthView from "../MonthView/MonthView";
 
 const departments = {
   NetZero: false,
@@ -120,7 +121,7 @@ const Wrapper = () => {
               todayDate={todayDate}
             />
           )}
-          {selectedPlan === "Monthly" && <h1>Monthly</h1>}
+          {selectedPlan === "Monthly" && <MonthView viewDate={viewDate}/>}
         </div>
       </div>
     </>

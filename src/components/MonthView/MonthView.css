@@ -1,4 +1,19 @@
-.rbc-day-bg.rbc-today {
-    background-color: #e5e5e5;
-    color: #fff;
-  }
+  /* .rbc-event, .rbc-day-slot .rbc-background-event {
+    background-color: red !important;
+  } */
+
+
+
+.rbc-row,
+.rbc-month-header {
+  height: 50px;
+  display: flex;
+  /* align-items: center; */
+  overflow-y: visible;
+}
+
+.rbc-header {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
