@@ -13,7 +13,7 @@
 	box-shadow:  -11px 11px 22px #bdbdbd;
 	border                  : 1px solid rgba(255, 255, 255, 0.125);
 	height                  : fit-content;
-	width: 800px;
+	width: 50vw;
 }
 
 .wrapper {
@@ -35,8 +35,11 @@
 }
 
 .cardDetails {
-	padding: 0.5rem;
 	display: grid;
+	justify-content: left;
+	align-items: start;
+	padding: 0.5rem;
+	gap: 1rem;
 	width: 100%;
 	grid-template-columns: repeat(3, 1fr);
 }
@@ -45,10 +48,11 @@
 	font-weight: 800;
 	display: flex;
 	width: 100%;
+	font-size: 1.2rem;
 	flex-flow: row nowrap;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0.5rem;
+	padding: 0.2rem;
 }
 .cross {
 	display: flex;
@@ -56,27 +60,36 @@
 	align-items: center;
 	cursor : pointer;
 	aspect-ratio: 1/1;
-	width: 24px;
-	margin: 0 1rem;
-	padding: 0.8rem;
+	width: 16px;
+	margin: 0.8rem;
 	z-index : 1100;
 }
 
 
 .campaignDates {
 	display: flex;
-	padding: 0.5rem;
-	width: 100%;
+	align-items: center;
+	width: 98%;
 	flex-direction: row;
-    justify-content: space-evenly;
+	padding: 0.5rem;
+    justify-content: space-between;
 }
 
 .blurb {
 	max-width:35em;
-	padding: 0.2rem 1rem;
 }
 
 .assignedTo {
-	width: 100%;
-	text-align: center;
+	width: fit-content;
+}
+
+.startDate {
+	font-size: 1rem;
+	opacity: 0.8;
+	font-weight: 300;
+}
+
+.endDate {
+	font-size: 1.1rem;
+	font-weight: 500;
 }
