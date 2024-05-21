@@ -1,5 +1,6 @@
 .clickCard {
 	display: flex;
+	font-size: 1.2rem;
 	flex-flow: column nowrap;
 	position: fixed;
 	top: 50%;
@@ -46,7 +47,6 @@
 	display: grid;
 	justify-content: left;
 	align-items: start;
-	padding: 0.5rem;
 	gap: 1rem;
 	width: 100%;
 	grid-template-columns: repeat(3, 1fr);
@@ -85,19 +85,16 @@
 
 .blurb {
 	max-width:35em;
+	height: 100%;
+	margin: 0.6rem;
 }
 
 .assignedTo {
+	font-size: 1rem;
 	width: fit-content;
 }
 
-.startDate {
+.endDate, .startDate {
 	font-size: 1rem;
-	opacity: 0.8;
 	font-weight: 300;
-}
-
-.endDate {
-	font-size: 1.1rem;
-	font-weight: 500;
 }
