@@ -27,7 +27,7 @@ const Wrapper = () => {
     setSelectedDepartments({
       ...selectedDepartments,
       [department]: !selectedDepartments[department],
-    });
+    });    
   };
 
   function todayDate() {
@@ -50,6 +50,10 @@ const Wrapper = () => {
     setViewDate(newDate);
   }
 
+  const notImplemented = () => {
+    alert("This feature is not implemented yet");
+  };
+
   return (
     <>
       {/* Header -> logo -> comms -> dashboard*/}
@@ -70,25 +74,24 @@ const Wrapper = () => {
         <nav className="nav-bar">
           <div className="nav-wrapper">
             <h1 className="year">{year}</h1>
-            <div className="buttonWrapper">
-              <button
-                className="monthButton"
-                type="button"
-                onClick={backwardMonth}
-              >
+            <div className="date-button-wrapper">
+              <button className="buttons" type="button" onClick={backwardMonth}>
                 {"<"}
               </button>
-
-              <button className="monthButton" type="button" onClick={todayDate}>
+              <button className="buttons" type="button" onClick={todayDate}>
                 Today
               </button>
-
-              <button
-                className="monthButton"
-                type="button"
-                onClick={forwardMonth}
-              >
+              <button className="buttons" type="button" onClick={forwardMonth}>
                 {">"}
+              </button>
+            </div>
+            <div className="create-task-wrapper">
+              <button
+                type="button"
+                className="buttons not-implemented"
+                onClick={notImplemented}
+              >
+                + Create Task
               </button>
             </div>
             <SwitchesContainer
