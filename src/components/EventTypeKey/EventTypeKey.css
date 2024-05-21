@@ -12,7 +12,7 @@
   /* position: absolute; 
   top: 10%; 
   left: 75%; */
-  border-radius: 10px;
+  border-radius: 0.7rem;
   z-index: -1;
   grid-template-columns: repeat(2, 1fr);
   -webkit-box-shadow: 8px 8px 18px #d9d9d9;
