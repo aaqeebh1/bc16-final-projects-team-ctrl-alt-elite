@@ -2,9 +2,10 @@ import { Gantt, ViewMode } from "gantt-task-react";
 import "gantt-task-react/dist/index.css";
 import "./SixMonthView.css";
 import tasks from "../../assets/DummyData.js";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import HoverCard from "../HoverCard/HoverCard.jsx";
 
-export default function SixMonthView({ selectedDepartments, setViewDate, viewDate, todayDate }) {
+export default function SixMonthView({ selectedDepartments, setViewDate, viewDate }) {
   const [filterTasks, setFilterTasks] = useState([]);
   // const [viewDate, setViewDate] = useState(new Date());
   const [windowStart, setWindowStart] = useState(new Date()); //
@@ -16,7 +17,7 @@ export default function SixMonthView({ selectedDepartments, setViewDate, viewDat
   const updateWindow = (date) => {
     const start = new Date(date);
     const end = new Date(date);
-    end.setMonth(end.getMonth() + 2); // End two months after the view date
+    end.setMonth(end.getMonth() + 1); // End two months after the view date
     setWindowStart(start);
     setWindowEnd(end);
     console.log("start date is" + start);
@@ -43,7 +44,9 @@ export default function SixMonthView({ selectedDepartments, setViewDate, viewDat
           (taskStart <= windowStart && taskEnd >= windowEnd))
       );
     });
+
     setFilterTasks(filteredTasks);
+    console.log(filteredTasks);
   }, [selectedDepartments, tasks, windowStart, windowEnd]);
 
   const deleteSidebar = {
@@ -51,10 +54,9 @@ export default function SixMonthView({ selectedDepartments, setViewDate, viewDat
     TaskListHeader: () => null,
     TaskListTable: () => null,
   };
-
   return (
     <>
-      
+
       <Gantt
         tasks={filterTasks.length ? filterTasks : tasks}
         viewMode={ViewMode.Month}
@@ -64,7 +66,15 @@ export default function SixMonthView({ selectedDepartments, setViewDate, viewDat
         viewDate={viewDate}
         ganttHeight={window.innerHeight * 0.66}
         {...deleteSidebar}
-        fontSize="16px"
+        TooltipContent={
+        ({task}) => <HoverCard
+            campaign={task.id}
+            depColor={task.styles.progressColor}
+            blurb = {task.blurb}
+            assigned = {task.assigned}
+            startDate={task.start}
+            endDate={task.end}
+        />}
       />
     </>
   );
