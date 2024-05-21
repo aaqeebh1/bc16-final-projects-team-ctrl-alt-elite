@@ -13,7 +13,16 @@
 	width                   : fit-content;
 	max-width               : 35em;
 	height                  : fit-content;
+	animation: fade-in 0.35s ease-in-out;
 }
+ @keyframes fade-in {
+	 0% {
+		 opacity: 0;
+	 }
+	 100% {
+		 opacity: 100%;
+	 }
+ }
 
 .blurb {
 	width : 100%;

@@ -36,9 +36,7 @@ const tasks = [
       backgroundSelectedColor: departmentColors.Transport,
     },
     blurb:
-      "This campaign encourages employees to commute by bicycle, promoting health and reducing carbon footprint. Party in the USA. Blank Space. can you guess?",
-    blurbTwo: "We really need to push this one as this reflects on our plans for a greener West Midlands.",
-    blurbThree: "Can you get the posters done for the Green Midlands campaign?"
+      "This campaign encourages employees to commute by bicycle, promoting health and reducing carbon footprint.",
   },
   {
     start: new Date(2024, 5, 1), // Earliest start date for Improve Tenant Satisfaction tasks
