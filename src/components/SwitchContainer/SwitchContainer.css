@@ -23,6 +23,7 @@
   -webkit-box-shadow: 8px 8px 18px #d9d9d9;
   -moz-box-shadow: 8px 8px 18px #d9d9d9;
   box-shadow:  8px 8px 18px #d9d9d9;
+  font-variation-settings: "wght" 700;
 }
 
 /* input (radio) for toggling. hidden - use labels for clicking on */

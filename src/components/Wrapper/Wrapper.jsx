@@ -7,6 +7,7 @@ import SwitchesContainer from "../SwitchContainer/SwitchContainer";
 import DepartmentKey from "../DepartmentKey/DepartmentKey";
 import EventTypeKey from "../EventTypeKey/EventTypeKey";
 import SixMonthView from "../SixMonthView/SixMonthView";
+import MonthView from "../MonthView/MonthView";
 
 const departments = {
   NetZero: false,
@@ -22,6 +23,7 @@ const Wrapper = () => {
   const [selectedPlan, setSelectedPlan] = useState("Yearly");
   const [selectedDepartments, setSelectedDepartments] = useState(departments);
   const year = viewDate.getFullYear();
+  const month = viewDate.toLocaleString("default", { month: "long" });
 
   const handleDepartmentSelection = (department) => {
     setSelectedDepartments({
@@ -30,25 +32,29 @@ const Wrapper = () => {
     });
   };
 
-  function TodayDate() {
+  function todayDate() {
     // Get current date
     setViewDate(new Date());
   }
 
-  function ForwardMonth() {
+  function forwardMonth() {
     let newDate = new Date(viewDate);
     newDate.getMonth() === 11
       ? newDate.setFullYear(newDate.getFullYear() + 1) && newDate.setMonth(0)
       : newDate.setMonth(newDate.getMonth() + 1);
     setViewDate(newDate);
   }
-  function BackwardMonth() {
+  function backwardMonth() {
     let newDate = new Date(viewDate);
     newDate.getMonth() === 0
       ? newDate.setFullYear(newDate.getFullYear() - 1) && newDate.setMonth(11)
       : newDate.setMonth(newDate.getMonth() - 1);
     setViewDate(newDate);
   }
+
+  const notImplemented = () => {
+    alert("This feature is not implemented yet");
+  };
 
   return (
     <>
@@ -69,26 +75,28 @@ const Wrapper = () => {
       <div className="wrapper-container">
         <nav className="nav-bar">
           <div className="nav-wrapper">
-            <h1 className="year">{year}</h1>
-            <div className="buttonWrapper">
-              <button
-                className="monthButton"
-                type="button"
-                onClick={BackwardMonth}
-              >
+            <div className="date-wrapper">
+              <h3 className="month">{month}</h3>
+              <h1 className="year">{year}</h1>
+            </div>
+            <div className="date-button-wrapper">
+              <button className="buttons" type="button" onClick={backwardMonth}>
                 {"<"}
               </button>
-
-              <button className="monthButton" type="button" onClick={TodayDate}>
+              <button className="buttons" type="button" onClick={todayDate}>
                 Today
               </button>
-
-              <button
-                className="monthButton"
-                type="button"
-                onClick={ForwardMonth}
-              >
+              <button className="buttons" type="button" onClick={forwardMonth}>
                 {">"}
+              </button>
+            </div>
+            <div className="create-task-wrapper">
+              <button
+                type="button"
+                className="buttons not-implemented"
+                onClick={notImplemented}
+              >
+                + Create Task
               </button>
             </div>
             <SwitchesContainer
@@ -98,7 +106,7 @@ const Wrapper = () => {
             <DepartmentKey
               handleDepartmentSelection={handleDepartmentSelection}
             />
-            <EventTypeKey />
+            <EventTypeKey selectedPlan={selectedPlan} />
           </div>
         </nav>
         <div className="view-window">
@@ -114,9 +122,10 @@ const Wrapper = () => {
               selectedDepartments={selectedDepartments}
               setViewDate={setViewDate}
               viewDate={viewDate}
+              todayDate={todayDate}
             />
           )}
-          {selectedPlan === "Monthly" && <h1>Monthly</h1>}
+          {selectedPlan === "Monthly" && <MonthView viewDate={viewDate} />}
         </div>
       </div>
     </>

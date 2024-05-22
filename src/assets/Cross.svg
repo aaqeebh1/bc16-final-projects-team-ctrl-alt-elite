@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.79 54.79">
+  <g id="Cross">
+    <g id="Cross-2" data-name="Cross">
+      <line x1="3.39" y1="3.39" x2="51.39" y2="51.39" style="fill: #fff; stroke: #231f20; stroke-linecap: round; stroke-linejoin: round; stroke-width: 6.79px;"/>
+      <line x1="51.39" y1="3.39" x2="3.39" y2="51.39" style="fill: #fff; stroke: #231f20; stroke-linecap: round; stroke-linejoin: round; stroke-width: 6.79px;"/>
+    </g>
+  </g>
+</svg>

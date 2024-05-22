@@ -1,0 +1,46 @@
+.hover-card {
+	position                : fixed;
+	top                     : 50%;
+	left                    : 50%;
+	transform               : translate(-50%, -50%);
+	z-index                 : 999;
+	backdrop-filter         : blur(14px) saturate(100%);
+	-webkit-backdrop-filter : blur(14px) saturate(100%);
+	background-color        : rgba(255, 255, 255, 0.65);
+	border-radius: 12px;
+	box-shadow:  -11px 11px 22px #bdbdbd;
+	border                  : 1px solid rgba(255, 255, 255, 0.125);
+	width                   : 30vw;
+	max-width               : 35em;
+	height                  : fit-content;
+	animation: fade-in 0.35s ease-in-out;
+}
+ @keyframes fade-in {
+	 0% {
+		 opacity: 0;
+	 }
+	 100% {
+		 opacity: 100%;
+	 }
+ }
+
+.blurb {
+	width : 100%;
+}
+
+.campaign-title {
+	font-weight : 800;
+	height      : fit-content;
+	padding     : 0.5rem;
+	width       : 100%;
+	z-index     : 2;
+}
+
+.card-details {
+	display   : flex;
+	flex-flow : column nowrap;
+	gap       : 1rem;
+	height    : 100%;
+	padding   : 0.2rem;
+	width     : 100%;
+}

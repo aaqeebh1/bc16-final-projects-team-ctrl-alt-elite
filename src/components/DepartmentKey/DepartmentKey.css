@@ -7,10 +7,11 @@
   background: var(--switches-bg-color);
   padding: 20px;
   margin-top: 5px;
+  
   /* position: absolute; 
   top: 10%; 
   left: 53%; */
-  border-radius: 10px;
+  border-radius: 0.7rem;
   font-variation-settings: "wght" 400;
   -webkit-box-shadow: 8px 8px 18px #d9d9d9;
   -moz-box-shadow: 8px 8px 18px #d9d9d9;
@@ -25,13 +26,22 @@
 
 .departmentKey__item {
   display: flex;
-  padding-top: 5px;
+  padding: 5px;
   cursor: pointer;
+  transition: all 0.35s;
+  border-radius: 0.7rem;
+  align-items: center;
+}
+
+.departmentKey__item:hover {
+  background-color: #cccccc;
+  
 }
 
 .departmentKey__item--color {
   border: 1px solid #cccccc;
   margin-right: 10px;
+  border-radius: 0.4rem;
 }
 
 .department-btn {
