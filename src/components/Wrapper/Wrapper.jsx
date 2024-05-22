@@ -23,12 +23,13 @@ const Wrapper = () => {
   const [selectedPlan, setSelectedPlan] = useState("Yearly");
   const [selectedDepartments, setSelectedDepartments] = useState(departments);
   const year = viewDate.getFullYear();
+  const month = viewDate.toLocaleString("default", { month: "long" });
 
   const handleDepartmentSelection = (department) => {
     setSelectedDepartments({
       ...selectedDepartments,
       [department]: !selectedDepartments[department],
-    });    
+    });
   };
 
   function todayDate() {
@@ -74,7 +75,10 @@ const Wrapper = () => {
       <div className="wrapper-container">
         <nav className="nav-bar">
           <div className="nav-wrapper">
-            <h1 className="year">{year}</h1>
+            <div className="date-wrapper">
+              <h3 className="month">{month}</h3>
+              <h1 className="year">{year}</h1>
+            </div>
             <div className="date-button-wrapper">
               <button className="buttons" type="button" onClick={backwardMonth}>
                 {"<"}
@@ -121,7 +125,7 @@ const Wrapper = () => {
               todayDate={todayDate}
             />
           )}
-          {selectedPlan === "Monthly" && <MonthView viewDate={viewDate}/>}
+          {selectedPlan === "Monthly" && <MonthView viewDate={viewDate} />}
         </div>
       </div>
     </>

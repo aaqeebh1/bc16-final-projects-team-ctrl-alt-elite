@@ -12,7 +12,7 @@ const localizer = momentLocalizer(moment); // or globalizeLocalizer
 export default function MonthView({ viewDate }) {
   const [date, setDate] = useState(new Date(viewDate));
   const events = tasks
-    .filter((task) => task.type === "task") // Filter tasks by type
+    .filter((task) => task.type === "task" || task.type === "milestone") // Filter tasks by type
     .map((task) => ({
       title: task.name + " - " + task.id,
       start: task.start,
