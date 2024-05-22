@@ -36,13 +36,10 @@ header {
 }
 .nav-wrapper {
   display: flex;
-  /* grid-template-columns: repeat(4, 1fr); */
   gap: 20px;
   align-items: end;
   width: 100%;
   margin: 0 auto;
-  /* margin: 0 200px; */
-  /* margin-bottom: 5px; */
   overflow: visible;
 }
 .nav-bar h1 {
@@ -66,14 +63,26 @@ header {
 .view-window {
   height: 74%;
   width: 100%;
-  /* background-color: red; */
-  /* border: 1px solid black;
-  border-radius: 10px; */
-  /* margin-top: 20px; */
   margin-top: 20px;
-  /* -webkit-box-shadow: 10px 10px 103px -39px rgb(0, 0, 0);
-  -moz-box-shadow: 10px 10px 103px -39px rgb(0, 0, 0);
-  box-shadow: 10px 10px 103px -39px rgb(0, 0, 0); */
+}
+
+.create-task-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  text-wrap: nowrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 1750px) {
+  .create-task-wrapper {
+    flex-flow: column nowrap;
+    align-items: end;
+  }
+}
+
+.not-implemented {
+  margin: 0;
 }
 
 /* date button styling */
@@ -118,11 +127,11 @@ header {
   font-size: 16px !important;
 }
 
-._9w8d5{
+._9w8d5 {
   font-size: 14.4px !important;
   font-weight: 700 !important;
 }
 
-._2q1Kt{
+._2q1Kt {
   display: none !important;
 }

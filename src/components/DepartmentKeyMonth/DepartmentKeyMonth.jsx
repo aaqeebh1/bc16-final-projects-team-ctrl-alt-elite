@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./DepartmentKey.css";
+import "./DepartmentKeyMonth.css";
 
 const DepartmentKey = ({ handleDepartmentSelection }) => {
   const departmentColors = {
@@ -11,28 +11,11 @@ const DepartmentKey = ({ handleDepartmentSelection }) => {
     Business: "#F87168",
   };
 
-  const selectedDepartmentKey = (department) => {
-    const departmentId = document.getElementById(department).classList;
-    if (departmentId.contains("selected")) {
-      document.getElementById(department).classList = "departmentKey__item";
-    } else {
-      document.getElementById(department).classList =
-        "departmentKey__item selected";
-    }
-  };
-
   return (
     <>
       <div className="departmentKey-container">
         <div className="departmentKey">
-          <div
-            id="Transport"
-            className="departmentKey__item selected"
-            onClick={() => {
-              handleDepartmentSelection("Transport");
-              selectedDepartmentKey("Transport");
-            }}
-          >
+          <div id="Transport" className="departmentKey__item--month">
             <div
               className="departmentKey__item--color"
               style={{
@@ -43,14 +26,7 @@ const DepartmentKey = ({ handleDepartmentSelection }) => {
             ></div>
             <div className="departmentKey__item--text">Transport</div>
           </div>
-          <div
-            id="Business"
-            className="departmentKey__item selected"
-            onClick={() => {
-              handleDepartmentSelection("Business");
-              selectedDepartmentKey("Business");
-            }}
-          >
+          <div id="Business" className="departmentKey__item--month">
             <div
               className="departmentKey__item--color"
               style={{
@@ -61,14 +37,7 @@ const DepartmentKey = ({ handleDepartmentSelection }) => {
             ></div>
             <div className="departmentKey__item--text">Business</div>
           </div>
-          <div
-            id="NetZero"
-            className="departmentKey__item selected"
-            onClick={() => {
-              handleDepartmentSelection("NetZero");
-              selectedDepartmentKey("NetZero");
-            }}
-          >
+          <div id="NetZero" className="departmentKey__item--month">
             <div
               className="departmentKey__item--color"
               style={{
@@ -79,14 +48,7 @@ const DepartmentKey = ({ handleDepartmentSelection }) => {
             ></div>
             <div className="departmentKey__item--text">Net Zero</div>
           </div>
-          <div
-            id="Housing"
-            className="departmentKey__item selected"
-            onClick={() => {
-              handleDepartmentSelection("Housing");
-              selectedDepartmentKey("Housing");
-            }}
-          >
+          <div id="Housing" className="departmentKey__item--month">
             <div
               className="departmentKey__item--color"
               style={{
@@ -97,14 +59,7 @@ const DepartmentKey = ({ handleDepartmentSelection }) => {
             ></div>
             <div className="departmentKey__item--text">Housing</div>
           </div>
-          <div
-            id="Skills"
-            className="departmentKey__item selected"
-            onClick={() => {
-              handleDepartmentSelection("Skills");
-              selectedDepartmentKey("Skills");
-            }}
-          >
+          <div id="Skills" className="departmentKey__item--month">
             <div
               className="departmentKey__item--color"
               style={{
@@ -115,14 +70,7 @@ const DepartmentKey = ({ handleDepartmentSelection }) => {
             ></div>
             <div className="departmentKey__item--text">Skills</div>
           </div>
-          <div
-            id="Internal"
-            className="departmentKey__item selected"
-            onClick={() => {
-              handleDepartmentSelection("Internal");
-              selectedDepartmentKey("Internal");
-            }}
-          >
+          <div id="Internal" className="departmentKey__item--month">
             <div
               className="departmentKey__item--color"
               style={{
