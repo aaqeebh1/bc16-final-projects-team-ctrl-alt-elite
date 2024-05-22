@@ -6,13 +6,23 @@
 	z-index                 : 999;
 	backdrop-filter         : blur(14px) saturate(100%);
 	-webkit-backdrop-filter : blur(14px) saturate(100%);
-	background-color        : rgba(17, 25, 40, 0.05);
-	border-radius           : 12px;
+	background-color        : rgba(255, 255, 255, 0.65);
+	border-radius: 12px;
+	box-shadow:  -11px 11px 22px #bdbdbd;
 	border                  : 1px solid rgba(255, 255, 255, 0.125);
-	width                   : fit-content;
-	max-width               : 34em;
+	width                   : 30vw;
+	max-width               : 35em;
 	height                  : fit-content;
+	animation: fade-in 0.35s ease-in-out;
 }
+ @keyframes fade-in {
+	 0% {
+		 opacity: 0;
+	 }
+	 100% {
+		 opacity: 100%;
+	 }
+ }
 
 .blurb {
 	width : 100%;
