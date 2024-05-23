@@ -10,7 +10,6 @@ const CustomEvent = ({ event }) => {
   useEffect(() => {
     setEventTask(tasks.find((task) => task.id === event.id));
   }, []);
-  console.log(eventTask.type);
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
