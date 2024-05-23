@@ -1,4 +1,5 @@
 import './HoverCard.css'
+import styles from "../ClickCard/ClickCard.module.css";
 
 const HoverCard = (props) => {
     return (
@@ -18,10 +19,20 @@ const HoverCard = (props) => {
                         null
                     }
                 <div>
-                    Starts: {props.startDate.toDateString()}
+                    {props.project === 'yes' ? (
+                        <span>{`Start: ${props.startDate.toDateString()}`}</span>
+                    ) : (
+                        <span>{props.startDate.toDateString()}</span>
+                    )}
                     <br/>
+                    {props.project === "yes" ?
+                        <span className={styles.endDate}>
                     Ends: {props.endDate.toDateString()}
+                        </span> :
+                        null
+                    }
                 </div>
+
             </div>
         </div>
     )

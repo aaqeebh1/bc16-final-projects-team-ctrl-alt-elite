@@ -75,6 +75,7 @@ export default function SixMonthView({selectedDepartments, setViewDate, viewDate
                 assigned={clicked[0].assigned}
                 startDate={clicked[0].start}
                 endDate={clicked[0].end}
+                project={clicked[0].type === "project" ? "yes" : ""}
             />}
             <Gantt
                 tasks={filterTasks.length ? filterTasks : tasks}
@@ -97,6 +98,7 @@ export default function SixMonthView({selectedDepartments, setViewDate, viewDate
                         assigned={task.assigned}
                         startDate={task.start}
                         endDate={task.end}
+                        project={task.type === "project" ? "yes" : ""}
                     />}
             />
         </>
