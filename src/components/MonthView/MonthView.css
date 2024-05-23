@@ -1,8 +1,10 @@
 .rbc-month-header {
   height: 50px;
   display: flex;
-  /* align-items: center; */
   overflow-y: visible;
+}
+.rbc-row-content {
+  z-index: unset;
 }
 
 .rbc-header {
