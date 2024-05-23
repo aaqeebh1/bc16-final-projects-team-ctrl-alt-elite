@@ -29,12 +29,17 @@ export default function ClickCard(props) {
             </div>
                 <div className={styles.campaignDates}>
                     <span className={styles.assignedTo}> Assigned to {props.assigned}</span>
-                    <span className={styles.startDate}>
-                    Starts: {props.startDate.toDateString()}
-                        </span>
+                    {props.project === 'yes' ? (
+                        <span>{`Start: ${props.startDate.toDateString()}`}</span>
+                    ) : (
+                        <span>{props.startDate.toDateString()}</span>
+                    )}
+                    {props.project === "yes" ?
                     <span className={styles.endDate}>
                     Ends: {props.endDate.toDateString()}
-                        </span>
+                        </span> :
+                        null
+                    }
                 </div>
         </div>
         </main>
