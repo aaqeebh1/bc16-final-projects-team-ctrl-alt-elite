@@ -780,7 +780,7 @@ const tasks = [
 
   {
     start: new Date(2024, 5, 1), // 1st June
-    end: new Date(2024, 5, 2), // 2nd June
+    end: new Date(2024, 5, 3), // 2nd June
     department: "Transport",
     name: "🎥", // Using the exact option provided
     type: "milestone", // Changed to "milestone"
@@ -871,7 +871,7 @@ const tasks = [
   },
   {
     start: new Date(2024, 11, 30), // 30th November
-    end: new Date(2024, 12, 1), // Milestone doesn't have a duration
+    end: new Date(2024, 12, 2), // Milestone doesn't have a duration
     department: "NetZero",
     name: "📅", // Using the exact option provided
     type: "milestone", // Changed to "milestone"
@@ -893,7 +893,7 @@ const tasks = [
   },
   {
     start: new Date(2024, 7, 20), // 20th August
-    end: new Date(2024, 7, 21), // Milestone lasts for 2 days
+    end: new Date(2024, 7, 22), // Milestone lasts for 2 days
     department: "Internal",
     name: "📅", // Using an emoji for an internal activity
     type: "milestone", // Changed to "milestone"
@@ -915,7 +915,7 @@ const tasks = [
   },
   {
     start: new Date(2024, 8, 10), // 10th September
-    end: new Date(2024, 8, 11), // Milestone lasts for 2 days
+    end: new Date(2024, 8, 12), // Milestone lasts for 2 days
     department: "Internal",
     name: "📧", // Using an emoji for an internal activity
     type: "milestone", // Changed to "milestone"
@@ -937,7 +937,7 @@ const tasks = [
   },
   {
     start: new Date(2024, 10, 15), // 15th November
-    end: new Date(2024, 10, 16), // Milestone lasts for 2 days
+    end: new Date(2024, 10, 17), // Milestone lasts for 2 days
     department: "Internal",
     name: "📅", // Using an emoji for an internal activity
     type: "milestone", // Changed to "milestone"
@@ -959,7 +959,7 @@ const tasks = [
   },
   {
     start: new Date(2024, 11, 20), // 20th December
-    end: new Date(2024, 11, 21), // Milestone lasts for 2 days
+    end: new Date(2024, 11, 22), // Milestone lasts for 2 days
     department: "Internal",
     name: "📱", // Using an emoji for an internal activity
     type: "milestone", // Changed to "milestone"
@@ -981,7 +981,7 @@ const tasks = [
   },
   {
     start: new Date(2025, 2, 15), // 15th March
-    end: new Date(2025, 2, 16), // Milestone lasts for 2 days
+    end: new Date(2025, 2, 17), // Milestone lasts for 2 days
     department: "Internal",
     name: "📄", // Using an emoji for an internal activity
     type: "milestone", // Changed to "milestone"
