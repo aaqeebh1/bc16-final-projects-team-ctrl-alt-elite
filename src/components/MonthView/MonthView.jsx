@@ -3,7 +3,7 @@ import moment from "moment";
 import "../../../node_modules/react-big-calendar/lib/css/react-big-calendar.css";
 import tasks from "../../assets/DummyData.js";
 import "../MonthView/MonthView.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import ClickCard from "../ClickCard/ClickCard.jsx";
 import CustomEvent from "./CustomEvent";
 
@@ -41,6 +41,17 @@ export default function MonthView({ viewDate }) {
     setDate(new Date(viewDate));
   }, [viewDate]);
 
+  const { defaultDate, formats } = useMemo(
+    () => ({
+      defaultDate: new Date(2015, 3, 1),
+      formats: {
+        weekdayFormat: (date, culture, localizer) =>
+          localizer.format(date, "dddd", culture),
+      },
+    }),
+    []
+  );
+
   const handleSelected = (event) => {
     setDisplayClickCard(true);
     // match event with task from tasks use this to populate the click card
@@ -64,6 +75,7 @@ export default function MonthView({ viewDate }) {
       )}
       <div className="myCustomHeight">
         <Calendar
+          formats={formats}
           date={date}
           onNavigate={(date) => setDate(date)}
           localizer={localizer}

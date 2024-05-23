@@ -11,13 +11,7 @@ const EventTypeKey = ({ selectedPlan }) => {
   };
   return (
     <>
-      <div
-        className={
-          selectedPlan === "Yearly"
-            ? "event-type-key in-view"
-            : "event-type-key"
-        }
-      >
+      <div className="event-type-key">
         <div className="event-type-key__item">
           <div className="event-type-key__icon">📱</div>
           <div className="event-type-key__text">Social</div>

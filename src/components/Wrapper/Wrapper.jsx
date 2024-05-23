@@ -91,14 +91,7 @@ const Wrapper = () => {
                 {">"}
               </button>
             </div>
-            <div className="create-task-wrapper">
-              <button
-                type="button"
-                className="buttons not-implemented"
-                onClick={notImplemented}
-              >
-                + Create Task
-              </button>
+            <div className="create-task-wrapper">              
             <SwitchesContainer
               selectedPlan={selectedPlan}
               setSelectedPlan={setSelectedPlan}
