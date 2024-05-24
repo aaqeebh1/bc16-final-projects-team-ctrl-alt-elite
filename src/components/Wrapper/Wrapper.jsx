@@ -8,6 +8,7 @@ import DepartmentKey from "../DepartmentKey/DepartmentKey";
 import EventTypeKey from "../EventTypeKey/EventTypeKey";
 import SixMonthView from "../SixMonthView/SixMonthView";
 import MonthView from "../MonthView/MonthView";
+import DepartmentKeyMonth from "../DepartmentKeyMonth/DepartmentKeyMonth";
 
 const departments = {
   NetZero: false,
@@ -90,22 +91,19 @@ const Wrapper = () => {
                 {">"}
               </button>
             </div>
-            <div className="create-task-wrapper">
-              <button
-                type="button"
-                className="buttons not-implemented"
-                onClick={notImplemented}
-              >
-                + Create Task
-              </button>
-            </div>
+            <div className="create-task-wrapper">              
             <SwitchesContainer
               selectedPlan={selectedPlan}
               setSelectedPlan={setSelectedPlan}
-            />
-            <DepartmentKey
-              handleDepartmentSelection={handleDepartmentSelection}
-            />
+              />
+              </div>
+            {selectedPlan === "Monthly" ? (
+              <DepartmentKeyMonth />
+            ) : (
+              <DepartmentKey
+                handleDepartmentSelection={handleDepartmentSelection}
+              />
+            )}
             <EventTypeKey selectedPlan={selectedPlan} />
           </div>
         </nav>

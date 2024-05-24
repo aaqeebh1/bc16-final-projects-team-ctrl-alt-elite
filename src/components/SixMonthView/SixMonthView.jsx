@@ -22,19 +22,13 @@ export default function SixMonthView({selectedDepartments, setViewDate, viewDate
         end.setMonth(end.getMonth() + 1); // End two months after the view date
         setWindowStart(start);
         setWindowEnd(end);
-        console.log("start date is" + start);
-        console.log("end date is" + end);
     };
 
     // Update the window whenever viewDate changes
     useEffect(() => {
         updateWindow(viewDate);
-        console.log("view date is" + viewDate);
     }, [viewDate]);
 
-    useEffect(() => {
-        console.log(clicked);
-    }, [clicked]);
 
     useEffect(() => {
         const filteredTasks = tasks.filter((task) => {
@@ -52,7 +46,6 @@ export default function SixMonthView({selectedDepartments, setViewDate, viewDate
         });
 
         setFilterTasks(filteredTasks);
-        console.log(filteredTasks);
     }, [selectedDepartments, tasks, windowStart, windowEnd]);
 
     const deleteSidebar = {
@@ -75,6 +68,7 @@ export default function SixMonthView({selectedDepartments, setViewDate, viewDate
                 assigned={clicked[0].assigned}
                 startDate={clicked[0].start}
                 endDate={clicked[0].end}
+                project={clicked[0].type === "project" ? "yes" : ""}
             />}
             <Gantt
                 tasks={filterTasks.length ? filterTasks : tasks}
@@ -97,6 +91,7 @@ export default function SixMonthView({selectedDepartments, setViewDate, viewDate
                         assigned={task.assigned}
                         startDate={task.start}
                         endDate={task.end}
+                        project={task.type === "project" ? "yes" : ""}
                     />}
             />
         </>
