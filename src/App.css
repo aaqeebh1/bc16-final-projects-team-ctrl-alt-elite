@@ -18,12 +18,12 @@ body {
 }
 
 ._RRr13 > * {
-	width: 2rem;
-	height: 2rem;
+	width  : 2rem;
+	height : 2rem;
 }
 
-._RRr13 ~ text{
-	transform:translateY(7px);
+._RRr13 ~ text {
+	transform : translateY(7px);
 }
 
 
