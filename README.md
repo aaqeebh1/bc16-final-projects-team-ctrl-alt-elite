@@ -12,7 +12,7 @@ This project is designed to provide a comprehensive campaign management solution
 for Campaign/Press Directors and similar roles. It is divided into three views monthly, 
 quarterly, and yearly - enabling users to analyze their campaigns at both macro and micro levels.
 </p>
-<h2 align="center">Tech Stack</h2>
+<h2 align="center">Tech Stacks</h2>
 <p align="center">
 <img src="./README_Images/JS.png" alt="JS Logo" style="width: 48px;" />
 <img src="./README_Images/React.png" alt="React Logo" style="width: 48px;" />
